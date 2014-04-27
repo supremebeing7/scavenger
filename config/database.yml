@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: scavenger_development
+
+test:
+  adapter: postgresql
+  database: scavenger_test
+
+production:
+  adapter: postgresql
+  database: scavenger_production
