@@ -1,0 +1,8 @@
+<%= content_for :title, "Home" %>
+
+<h1>HOME</h1>
+
+<h2>USERS</h2>
+<% @users.each do |user| %>
+  <%= user.name %> - <%= user.username %> - <%= user.email %>
+<% end %>
