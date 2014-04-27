@@ -19,6 +19,7 @@ gem 'textacular'
 gem 'geocoder'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'inherited_resources'
 
 group :development do
   gem 'better_errors'
