@@ -4,6 +4,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
@@ -41,4 +43,22 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+  config.include IntegrationSpecHelper, :type => :feature
+  # before do
+  #   request.env["devise.mapping"] = Devise.mappings[:user]
+  #   request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
+  # end
 end
+
+Capybara.default_host = 'http://example.org'
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+      :provider => 'google_oauth2',
+      :uid => '123545'
+      # etc.
+    })
+OmniAuth.config.add_mock(:google_oauth2, {
+  :uid => '12345',
+  :provider => 'google'
+})

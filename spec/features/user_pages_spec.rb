@@ -19,11 +19,12 @@ describe User do
       page.should have_content "Email can't be blankPassword can't be blankName can't be blankUsername can't be blank"
     end
   end
-
-  # context 'Google signin' do
-  #   it 'allows user to sign in with Google credentials' do
-
-  #     page.should have_content "Successfully authenticated from Google account."
-  #   end
-  # end
 end
+
+# feature 'Google signin' do
+#   scenario 'allows user to sign in with Google credentials' do
+#     Capybara.current_driver = :poltergeist
+#     login_with_oauth
+#     page.should have_content "Successfully authenticated from Google account."
+#   end
+# end
