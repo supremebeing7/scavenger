@@ -2,3 +2,7 @@
 
 <h1><%= @user.name %></h1>
 <p>USER AVATAR HERE</p>
+
+<% @crawls.each do |crawl| %>
+  <p><%= link_to crawl.name, crawl %></p>
+<% end %>
