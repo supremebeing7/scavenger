@@ -1,0 +1,9 @@
+<%= content_for :title, @place.name %>
+
+<h1><%= @place.name %>
+<%= link_to "Edit place", edit_place_path(@place), class: "btn btn-primary btn-xs" %></h1>
+
+<h4>MAP OF PLACE GOES HERE</h4>
+
+<h4><%= @place.description %></h2>
+
