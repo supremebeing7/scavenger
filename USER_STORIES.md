@@ -2,14 +2,14 @@
 
 * As a user, I want to have an account so I can see a personalized version of the site.
 
+* As a registered user, I want to create a scavenger hunt / pub crawl so I can share it with my friends.
 
+* As a registered user, I want to mark my hunts/crawls as public or private so that I can decide whether strangers can see them.
 
 
 ##INCOMPLETE
 
-* As a registered user, I want to create a scavenger hunt / pub crawl so I can share it with my friends.
 
-* As a registered user, I want to mark my hunts/crawls as public or private so that I can decide whether strangers can see them.
 
 * As a registered user, I want to add places so that I can make them part of a scavenger hunt / pub crawl.
 

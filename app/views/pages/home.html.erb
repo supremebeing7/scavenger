@@ -1,8 +1,12 @@
 <%= content_for :title, "Home" %>
 
-<h1>HOME</h1>
-
 <h2>USERS</h2>
 <% @users.each do |user| %>
   <p><%= user.name %> - <%= user.username %> - <%= user.email %></p>
+<% end %>
+
+<h2>CRAWLS</h2>
+<% @crawls.each do |crawl| %>
+  <p><%= crawl.name %></p>
+  <p><%= crawl.description %></p>
 <% end %>
