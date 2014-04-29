@@ -1,6 +1,7 @@
 <%= content_for :title, "Home" %>
 
 <h2>CRAWLS</h2>
+<%= link_to "Add a New Crawl", new_crawl_path, class: "btn btn-primary" %>
 <% @crawls.each do |crawl| %>
   <p><%= crawl.name %></p>
   <p><%= crawl.description %></p>
