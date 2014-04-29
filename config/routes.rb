@@ -3,5 +3,6 @@ Scavenger::Application.routes.draw do
   resources :pages
   resources :crawls
   resources :places
+  resources :users, only: :show
   root to: "pages#home"
 end
