@@ -1,5 +1,9 @@
 #main {
-  margin-top: 70px;
+  margin-top: 75px;
+}
+
+.pad-top {
+  padding-top: 20px;
 }
 
 .navbar-sized {
