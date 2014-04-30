@@ -17,6 +17,7 @@ gem 'paperclip'
 gem 'rest-client'
 gem 'textacular'
 gem 'geocoder'
+gem 'gmaps4rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
