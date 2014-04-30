@@ -9,7 +9,7 @@
 @user = FactoryGirl.create :user
 
 @crawl = FactoryGirl.build :crawl
-@crawl.update(user_id: @user.id)
+@crawl.update(user_id: @user.id, public: true)
 
 @place1 = Place.new(name: "Bar XV",
             description: "Divey little spot in Chinatown",

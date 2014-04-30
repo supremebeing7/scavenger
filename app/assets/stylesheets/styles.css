@@ -1,5 +1,9 @@
 #main {
-  margin-top: 70px;
+  margin-top: 75px;
+}
+
+.pad-top {
+  padding-top: 20px;
 }
 
 .navbar-sized {
@@ -64,4 +68,8 @@ h2 {
   -webkit-font-smoothing: antialiased;
   font-family: 'Shadows Into Light', cursive;
   font-size: 24px;
+}
+
+.glyphicon-map-marker {
+  color: #B80000;
 }

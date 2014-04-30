@@ -1,14 +1,22 @@
 <%= content_for :title, "Home" %>
 
 <div class="row">
-  <div class="col-sm-2">
-    <%= link_to "Add Hunt", new_crawl_path, class: "btn btn-custom" %>
+  <div class="col-sm-6">
+    <h1>It's Hunting Season</h1>
+    <p>Make scavenger hunts around your town to share with friends. Lots more functionality coming, but if you have a suggestion, <%= link_to "send us a message", url: "#" %> to let us know, or open an issue on <%= link_to "Github", "https://github.com/supremebeing7/scavenger/issues" %></p>
+    <%= link_to "Add a Scavenger Hunt!", new_crawl_path, class: "btn btn-custom btn-lg" %>
   </div>
-  <div class="col-sm-8">
-    <h2>CRAWLS</h2>
+</div>
+<div class="row pad-top">
+  <div class="col-sm-12">
+    <h2>Recently Added!</h2>
     <% @crawls.each do |crawl| %>
-      <p><%= link_to crawl.name, crawl %></p>
-      <p><%= crawl.description %></p>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <span class="glyphicon glyphicon-map-marker">
+          <%= link_to crawl.name, crawl %>
+        </span>
+        <p><%= crawl.description %></p>
+      </div>
     <% end %>
   </div>
 </div>
