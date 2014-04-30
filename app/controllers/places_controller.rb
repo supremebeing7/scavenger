@@ -7,13 +7,20 @@ class PlacesController < ApplicationController
 
   def new
     @place = Place.new
+    @crawl = Crawl.find(params[:crawl_id])
   end
 
   def create
+    @crawl = Crawl.find(params[:place][:crawl_id])
     @place = Place.new(place_params)
     if @place.save
       flash[:notice] = "Thanks for adding #{@place.name}!"
-      redirect_to @place
+      if @crawl
+        @crawl.places << @place
+        redirect_to @crawl
+      else
+        redirect_to @place
+      end
     else
       render new_place_path
     end

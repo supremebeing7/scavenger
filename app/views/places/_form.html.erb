@@ -13,5 +13,6 @@
   <div class="form-group">
     <%= f.text_field :website, :placeholder => 'Website' %>
   </div>
+  <%= f.hidden_field :crawl_id, value: @crawl.id if @crawl %>
   <%= f.submit(class: "btn btn-custom") %>
 <% end %>
