@@ -1,14 +1,18 @@
 <%= content_for :title, "Home" %>
 
 <div class="row">
+  <div class="col-sm-12">
+    <h2>Recently Added!</h2>
+    <% @crawls.each do |crawl| %>
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <span class="glyphicon glyphicon-map-marker">
+          <%= link_to crawl.name, crawl %>
+        </span>
+        <p><%= crawl.description %></p>
+      </div>
+    <% end %>
+  </div>
   <div class="col-sm-2">
     <%= link_to "Add Hunt", new_crawl_path, class: "btn btn-custom" %>
-  </div>
-  <div class="col-sm-8">
-    <h2>CRAWLS</h2>
-    <% @crawls.each do |crawl| %>
-      <p><%= link_to crawl.name, crawl %></p>
-      <p><%= crawl.description %></p>
-    <% end %>
   </div>
 </div>

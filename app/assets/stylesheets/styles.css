@@ -65,3 +65,7 @@ h2 {
   font-family: 'Shadows Into Light', cursive;
   font-size: 24px;
 }
+
+.glyphicon-map-marker {
+  color: #B80000;
+}
