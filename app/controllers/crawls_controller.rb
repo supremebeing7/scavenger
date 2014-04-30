@@ -23,6 +23,7 @@ class CrawlsController < ApplicationController
       marker.lat place.latitude
       marker.lng place.longitude
       marker.infowindow render_to_string(:partial => "/places/details", :locals => { :object => place})
+      marker.json({name: place.name})
     end
   end
 

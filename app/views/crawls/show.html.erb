@@ -33,12 +33,12 @@
     </ol>
   </div>
   <div class="col-sm-8" style='width: 400px;'>
-    <div id="map" style='width: 400px; height: 400px;'></div>
+    <div id="multi_markers" style='width: 400px; height: 400px;'></div>
   </div>
 </div>
 <script type="text/javascript">
 handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
   markers = handler.addMarkers(<%=raw @hash.to_json %>);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
