@@ -42,6 +42,6 @@ class User < ActiveRecord::Base
   end
 
   def full_size_pic
-    self.photo_url.sub('?sz=50', '')
+    self.photo_url.sub('?sz=50', '') if self.photo_url
   end
 end

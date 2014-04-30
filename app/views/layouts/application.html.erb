@@ -3,6 +3,7 @@
 <head>
   <title><%= content_for?(:title) ? yield(:title)+" | Scavenger" : "Scavenger" %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Shadows+Into+Light', media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
@@ -11,12 +12,12 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <%= link_to "Scavenger", root_url,
-        :class => "navbar-text navbar-left" %>
+        :class => "navbar-text navbar-left brand" %>
     <% if user_signed_in? %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete,
           :class => "navbar-text navbar-right" %>
       <%= image_tag current_user.photo_url, :class => "nav-photo navbar-right" %>
-      <%= link_to current_user.name, edit_user_registration_path,
+      <%= link_to current_user.name, current_user,
           :class => "navbar-text navbar-right" %>
       <span class="navbar-text navbar-right">Logged in as </span>
     <% else %>

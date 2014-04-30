@@ -1,28 +1,15 @@
-== README
+README
+============
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Scavenger Hunt / Pub Crawl app built with Ruby on Rails.
 
-Things you may want to cover:
+Uses Google Oauth2 for login.
 
-* Ruby version
+Check out [USER_STORIES.md](https://github.com/supremebeing7/scavenger/blob/master/USER_STORIES.md) to see the completed and upcoming features.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##Contributing
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request

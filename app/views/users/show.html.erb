@@ -1,8 +1,21 @@
 <%= content_for :title, @user.name %>
 
-<h1><%= @user.name %></h1>
-<p>USER AVATAR HERE</p>
-
-<% @crawls.each do |crawl| %>
-  <p><%= link_to crawl.name, crawl %></p>
-<% end %>
+<div class="row">
+  <div class="col-sm-4">
+    <h1><%= @user.name %></h1><%= link_to "Account Settings", edit_user_registration_path %>
+    <p><%= image_tag @user.full_size_pic %></p>
+  </div>
+  <div class="col-sm-8">
+    <h2>Your Scavenger Hunts / Pub Crawls</h2>
+    <% if @user.crawls.length > 0 %>
+      <% @user.crawls.each do |crawl| %>
+        <p><%= link_to crawl.name, crawl %></p>
+        <p><%= crawl.description %></p>
+      <% end %>
+      <%= link_to "Add Hunt", new_crawl_path, class: "btn btn-custom" %></p>
+    <% else %>
+      <p>You haven't added any yet!
+        <%= link_to "Get on it!", new_crawl_path, class: "btn btn-custom" %></p>
+    <% end %>
+  </div>
+</div>
