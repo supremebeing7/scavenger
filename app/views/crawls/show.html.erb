@@ -1,10 +1,31 @@
 <%= content_for :title, @crawl.name %>
 
-<h1><%= @crawl.name %>
-<%= link_to "Edit Crawl", edit_crawl_path(@crawl), class: "btn btn-primary btn-xs" %></h1>
+<div class="row">
+  <div class="col-sm-4">
+    <h1><%= @crawl.name %></h1>
+    <h6><%= link_to "Edit Hunt", edit_crawl_path(@crawl) %></h6>
 
-<h4>MAP OF HUNT GOES HERE</h4>
 
-<h4><%= @crawl.description %></h2>
+    <h4><%= @crawl.description %></h2>
 
-<%= link_to "Add Place", new_place_path, class: "btn btn-primary" %>
+    <h2>Here's the route!</h2>
+    <ol>
+      <% @crawl.places.each do |place| %>
+        <li>
+          <%= link_to place.name, place %><br>
+          <%= place.address %><br>
+          <%= place.description %><br>
+        </li>
+      <% end %>
+    </ol>
+
+    <%= link_to "Add Places to Hunt", new_place_path(crawl_id: @crawl.id), class: "btn btn-custom" %>
+  </div>
+  <div class="col-sm-8">
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+      <center><h4>MAP OF HUNT GOES HERE</h4></center>
+  </div>
+</div>
