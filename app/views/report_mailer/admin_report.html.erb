@@ -1,0 +1,5 @@
+Report submitted for <%= @report.place.name %>:
+<%= @report.description %>
+
+Submitted by <%= @report.user.name %> - <%= mail_to @report.user.email %>
+<%= link_to "Edit/Remove Reported Content", place_url(@report.place) %>
