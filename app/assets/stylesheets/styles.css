@@ -2,6 +2,10 @@
   margin-top: 75px;
 }
 
+img.avatar{
+  width:200px;
+}
+
 .pad-top {
   padding-top: 20px;
 }

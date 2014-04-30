@@ -3,16 +3,24 @@
 <div class="row">
   <div class="col-sm-4">
     <h1><%= @user.name %></h1><%= link_to "Account Settings", edit_user_registration_path %>
-    <p><%= image_tag @user.full_size_pic %></p>
+    <p>
+      <% if @user.full_size_pic %>
+        <%= image_tag @user.full_size_pic, class: "avatar" %>
+      <% else %>
+        <%= image_tag "missing.jpg", class: "avatar" %>
+      <% end %>
+    </p>
   </div>
   <div class="col-sm-8">
-    <h2>Your Scavenger Hunts / Pub Crawls</h2>
+    <h2>Scavenger Hunts</h2>
     <% if @user.crawls.length > 0 %>
       <% @user.crawls.each do |crawl| %>
         <p><%= link_to crawl.name, crawl %></p>
         <p><%= crawl.description %></p>
       <% end %>
-      <%= link_to "Add Hunt", new_crawl_path, class: "btn btn-custom" %></p>
+      <% if current_user && @user.id == current_user.id %>
+        <%= link_to "Add Hunt", new_crawl_path, class: "btn btn-custom" %>
+      <% end %>
     <% else %>
       <p>You haven't added any yet!
         <%= link_to "Get on it!", new_crawl_path, class: "btn btn-custom" %></p>

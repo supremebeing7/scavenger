@@ -4,7 +4,9 @@
   <div class="col-sm-4">
     <h1><%= @crawl.name %></h1>
     <h5>Created by <%= link_to @crawl.user.name, @crawl.user %></h5>
-    <h6><%= link_to "Edit Hunt", edit_crawl_path(@crawl) %></h6>
+    <% if current_user && @crawl.user_id == current_user.id %>
+      <h6><%= link_to "Edit Hunt", edit_crawl_path(@crawl) %></h6>
+    <% end %>
 
 
     <h4><%= @crawl.description %></h2>
@@ -15,7 +17,7 @@
         <li>
           <%= link_to place.name, place %><br>
           <%= place.address %><br>
-          <%= place.description %><br>
+          "<%= place.description %>"<br>
         </li>
       <% end %>
     </ol>
