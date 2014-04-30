@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :crawl do
-    name "Steve is 30!"
-    description "Celebrating Steve's 30th birthday with a wicked scavenger hunt all over Portland!"
+    name Faker::Company.catch_phrase
+    description Faker::Lorem.paragraph
   end
 end
