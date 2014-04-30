@@ -1,4 +1,16 @@
 <%= content_for :title, @user.name %>
 
-<h1><%= @user.name %></h1>
-<p><%= image_tag @user.full_size_pic %></p>
+<div class="row">
+  <div class="col-sm-4">
+    <h1><%= @user.name %></h1>
+    <p><%= image_tag @user.full_size_pic %></p>
+  </div>
+  <div class="col-sm-4">
+    <% if @user.crawls.length > 0 %>
+      <% @user.crawls.each do |crawl| %>
+        <p><%= link_to crawl.name, crawl %></p>
+        <p><%= crawl.description %></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
