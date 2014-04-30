@@ -84,6 +84,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffi (1.9.3)
     geocoder (1.2.0)
+    gmaps4rails (2.1.2)
     hashie (2.1.1)
     hike (1.2.3)
     i18n (0.6.9)
@@ -243,6 +244,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   geocoder
+  gmaps4rails
   jquery-rails
   launchy
   letter_opener

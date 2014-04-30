@@ -19,6 +19,11 @@ class CrawlsController < ApplicationController
 
   def show
     @crawl = Crawl.find(params[:id])
+    @hash = Gmaps4rails.build_markers(@crawl.places) do |place, marker|
+      marker.lat place.latitude
+      marker.lng place.longitude
+      marker.infowindow render_to_string(:partial => "/places/details", :locals => { :object => place})
+    end
   end
 
   def edit

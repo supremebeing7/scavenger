@@ -1,5 +1,5 @@
 #main {
-  margin-top: 75px;
+  margin-top: 25px;
 }
 
 img.avatar{
@@ -39,6 +39,13 @@ h1 {
 }
 
 h2 {
+  color: #B80000 !important;
+  font-family: 'Shadows Into Light', cursive;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+h4 {
   color: #B80000 !important;
   font-family: 'Shadows Into Light', cursive;
   text-transform: capitalize;
