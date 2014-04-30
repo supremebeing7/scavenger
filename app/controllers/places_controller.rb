@@ -28,8 +28,15 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find(params[:id])
+    @places = [@place]
     @name = @place.name
     @address = @place.address
+    @hash = Gmaps4rails.build_markers(@places) do |place, marker|
+      marker.lat place.latitude
+      marker.lng place.longitude
+      marker.infowindow render_to_string(:partial => "/places/details", :locals => { :object => place})
+      marker.json({name: place.name})
+    end
   end
 
   def edit
