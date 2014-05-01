@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :crawl do
     name Faker::Company.catch_phrase
-    description Faker::Lorem.paragraph
+    description Faker::Lorem.sentence
   end
 end

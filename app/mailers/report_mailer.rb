@@ -7,6 +7,8 @@ class ReportMailer < ActionMailer::Base
   end
   def user_report(report)
     @report = report
-    mail to: @report.user.email, subject: "Content Report Submitted"
+    if @report.user
+      mail to: @report.user.email, subject: "Content Report Submitted"
+    end
   end
 end
