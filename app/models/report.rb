@@ -1,6 +1,7 @@
 class Report < ActiveRecord::Base
   validates :description, presence: true
   belongs_to :place
+  belongs_to :crawl
   belongs_to :user
   after_create :send_report_email
 
