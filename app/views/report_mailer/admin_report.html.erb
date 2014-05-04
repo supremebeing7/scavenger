@@ -1,7 +1,20 @@
-Report submitted for <%= @report.place.name %>:
-<%= @report.description %>
+<h4>
+  Report submitted for
+  <% if @report.place %>
+    <%= @report.place.name %>:
+  <% else %>
+    <%= @report.crawl.name %>:
+  <% end %>
+<h4>
+
+<p><%= @report.description %></p>
 
 <% if @report.user %>
-  Submitted by <%= @report.user.name %> - <%= mail_to @report.user.email %>
+  <p>Submitted by <%= @report.user.name %> - <%= mail_to @report.user.email %></p>
 <% end %>
-<%= link_to "Edit/Remove Reported Content", place_url(@report.place) %>
+
+<% if @report.place %>
+  <%= link_to "Edit/Remove Reported Content", place_url(@report.place) %>
+<% else %>
+  <%= link_to "Edit/Remove Reported Content", crawl_url(@report.crawl) %>
+<% end %>
