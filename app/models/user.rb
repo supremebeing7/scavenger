@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   validates :username, uniqueness: true, presence: true
   has_many :crawls
   has_many :reports
+  has_many :completed_crawls
 
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info

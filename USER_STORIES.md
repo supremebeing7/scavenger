@@ -12,6 +12,7 @@
 
 
 ##INCOMPLETE
+* As a registered user, I want to mark a crawl as DONE if I've completed it.
 
 * As a registered user, I want to be able to edit or delete each place, all from the same screen.
 
@@ -19,7 +20,6 @@
 
 * As a registered user, I want to be able to favorite other user-created hunts/crawls so I can more easily find them next time.
 
-* As a registered user, I want to mark a crawl as DONE if I've completed it.
 
 * As an unregistered user, I want to be able to check in at a place and be able to upload a picture or answer a question in order to get the next clue.
 
