@@ -12,7 +12,7 @@
     </p>
   </div>
   <div class="col-sm-8">
-    <h2>Scavenger Hunts</h2>
+    <h2><%= @user.name %>'s Scavenger Hunts</h2>
     <% if @user.crawls.length > 0 %>
       <% @user.crawls.each do |crawl| %>
         <p><%= link_to crawl.name, crawl %></p>
@@ -24,6 +24,17 @@
     <% else %>
       <p>You haven't added any yet!
         <%= link_to "Get on it!", new_crawl_path, class: "btn btn-custom" %></p>
+    <% end %>
+
+    <% if @user.completed_crawls.length > 0 %>
+      <h2><%= @user.name %>'s Completed Hunts</h2>
+      <% @user.completed_crawls.each do |completed| %>
+        <p><%= link_to completed.crawl.name, completed.crawl %></p>
+        <p><%= completed.crawl.description %></p>
+      <% end %>
+      <% if current_user && @user.id == current_user.id %>
+        <%= link_to "Find more scavenger hunts!", crawls_path %>
+      <% end %>
     <% end %>
   </div>
 </div>
