@@ -2,15 +2,21 @@ class ReportsController < ApplicationController
 
   def new
     @report = Report.new
-    @place = Place.find(params[:id])
+    @place = Place.find(params[:pid]) if params[:pid]
+    @crawl = Crawl.find(params[:cid]) if params[:cid]
     @user = current_user
   end
 
   def create
     @report = Report.new(report_params)
     if @report.save
-      flash[:notice] = "Thanks for reporting #{@report.place.name}!"
-      redirect_to @report.place
+      if @report.place_id
+        flash[:notice] = "Thanks for reporting #{@report.place.name}!"
+        redirect_to @report.place
+      else
+        flash[:notice] = "Thanks for reporting #{@report.crawl.name}!"
+        redirect_to @report.crawl
+      end
     else
       render new_report_path
     end
@@ -18,6 +24,6 @@ class ReportsController < ApplicationController
 
 private
   def report_params
-    params.require(:report).permit(:place_id, :user_id, :description)
+    params.require(:report).permit(:place_id, :crawl_id, :user_id, :description)
   end
 end

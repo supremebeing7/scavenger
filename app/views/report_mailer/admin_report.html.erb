@@ -1,4 +1,10 @@
-Report submitted for <%= @report.place.name %>:
+Report submitted for
+<% if @report.place %>
+  <%= @report.place.name %>:
+<% else %>
+  <%= @report.crawl.name %>:
+<% end %>
+
 <%= @report.description %>
 
 <% if @report.user %>

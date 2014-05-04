@@ -1,4 +1,10 @@
-Thanks for letting us know about <%= @report.place.name %>:
+Thanks for letting us know about
+<% if @report.place %>
+  <%= @report.place.name %>:
+<% else %>
+  <%= @report.crawl.name %>:
+<% end %>
+
 <%= @report.description %>
 
 We appreciate it!

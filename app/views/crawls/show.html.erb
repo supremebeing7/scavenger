@@ -7,6 +7,8 @@
     <% if current_user && @crawl.user_id == current_user.id %>
       <h6><%= link_to "Edit Hunt", edit_crawl_path(@crawl) %></h6>
     <% end %>
+    <h6><%= link_to "Report Content", new_report_path(cid: @crawl.id) %></h6>
+
 
 
     <p><%= @crawl.description %></p>
