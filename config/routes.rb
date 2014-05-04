@@ -5,5 +5,6 @@ Scavenger::Application.routes.draw do
   resources :places
   resources :reports, only: [:new, :create]
   resources :users, only: :show
+  resources :completed_crawls, except: [:show]
   root to: "pages#home"
 end
