@@ -22,8 +22,8 @@
         <%= link_to "Add Hunt", new_crawl_path, class: "btn btn-custom" %>
       <% end %>
     <% else %>
-      <p>You haven't added any yet!
-        <%= link_to "Get on it!", new_crawl_path, class: "btn btn-custom" %></p>
+      <p>You haven't added any yet!</p>
+      <%= link_to "Get on it!", new_crawl_path, class: "btn btn-custom" %>
     <% end %>
 
     <% if @user.completed_crawls.length > 0 %>
@@ -33,7 +33,7 @@
         <p><%= completed.crawl.description %></p>
       <% end %>
       <% if current_user && @user.id == current_user.id %>
-        <%= link_to "Find more scavenger hunts!", crawls_path %>
+        <%= link_to "Find more scavenger hunts!", root_path %>
       <% end %>
     <% end %>
   </div>

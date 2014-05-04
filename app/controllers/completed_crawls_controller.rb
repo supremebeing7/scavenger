@@ -1,15 +1,20 @@
-class CrawlsController < ApplicationController
+class CompletedCrawlsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   def new
     @completed_crawl = CompletedCrawl.new
   end
 
   def create
-    @completed_crawl = CompletedCrawl.new(completed_crawl_params)
-    if @completed_crawl.save
-      redirect_to current_user, notice: "Good job completing the scavenger hunt!"
+    if CompletedCrawl.where(user_id: params[:completed_crawl][:user_id],
+                            crawl_id: params[:completed_crawl][:crawl_id]).exists?
+      redirect_to current_user, notice: "You've already marked that one complete."
     else
-      render 'new'
+      @completed_crawl = CompletedCrawl.new(completed_crawl_params)
+      if @completed_crawl.save
+        redirect_to current_user, notice: "Good job completing the scavenger hunt!"
+      else
+        render 'new'
+      end
     end
   end
 
