@@ -12,14 +12,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'faker'
 gem 'launchy'
-gem 'cancancan'
-gem 'paperclip'
 gem 'rest-client'
-gem 'textacular'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'thin'
 
 group :development do
   gem 'better_errors'
@@ -32,13 +30,13 @@ group :test, :development do
   gem 'letter_opener'
   gem 'pry'
   gem 'dotenv-rails'
-  gem 'poltergeist'
   gem 'factory_girl_rails'
-  gem 'factory_girl'
+  gem 'rerun'
 end
 
 group :test do
-  gem 'shoulda-matchers'
+  gem 'poltergeist'
+  gem 'shoulda'
   gem 'capybara'
   gem 'selenium-webdriver'
 end
