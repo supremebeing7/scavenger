@@ -2,7 +2,7 @@
 
 class RakeHerokuDeployer
   def initialize app_env
-    @app = ENV["YOUR_PRODUCTION_APP_NAME_ON_HEROKU"]
+    @app = ENV["SCAVENGER_APP"]
   end
 
   def run_migrations
