@@ -1,50 +1,61 @@
 #Deploy and rollback on Heroku in staging and production
-task :deploy_production => ['deploy:set_production_app', 'deploy:push', 'deploy:migrate', 'deploy:tag']
 
-namespace :deploy do
-  PRODUCTION_APP = ENV['YOUR_PRODUCTION_APP_NAME_ON_HEROKU']
-
-  task :production_migrations => [:set_production_app, :push, :off, :migrate, :restart, :on, :tag]
-  task :production_rollback => [:set_production_app, :off, :push_previous, :restart, :on]
-
-  task :set_production_app do
-    APP = PRODUCTION_APP
+class RakeHerokuDeployer
+  def initialize app_env
+    @app = ENV["YOUR_PRODUCTION_APP_NAME_ON_HEROKU"]
   end
 
-  task :push do
+  def run_migrations
+    push; turn_app_off; migrate; restart; turn_app_on; tag;
+  end
+
+  def deploy
+    push; restart; tag;
+  end
+
+  def rollback
+    turn_app_off; push_previous; restart; turn_app_on;
+  end
+
+  private
+
+  def push
+    current_branch = `git rev-parse --abbrev-ref HEAD`.chomp
+    branch_to_branch = (current_branch.length > 0) ? "#{current_branch}:master" : ""
     puts 'Deploying site to Heroku ...'
-    puts `git push -f git@heroku.com:#{APP}.git`
+    puts "git push -f git@heroku.com:#{@app}.git #{branch_to_branch}"
+    puts `git push -f git@heroku.com:#{@app}.git #{branch_to_branch}`
   end
 
-  task :restart do
+  def restart
     puts 'Restarting app servers ...'
-    puts `heroku restart --app #{APP}`
+    Bundler.with_clean_env { puts `heroku restart --app #{@app}` }
   end
 
-  task :tag do
-    release_name = "#{APP}_release-#{Time.now.utc.strftime("%Y%m%d%H%M%S")}"
+  def tag
+    release_name = "#{@app}_release-#{Time.now.utc.strftime("%Y%m%d%H%M%S")}"
     puts "Tagging release as '#{release_name}'"
     puts `git tag -a #{release_name} -m 'Tagged release'`
-    puts `git push --tags git@heroku.com:#{APP}.git`
+    puts `git push --tags git@heroku.com:#{@app}.git`
   end
 
-  task :migrate do
+  def migrate
     puts 'Running database migrations ...'
-    puts `heroku rake db:migrate --app #{APP}`
+    Bundler.with_clean_env { puts `heroku run 'bundle exec rake db:migrate' --app #{@app}` }
   end
 
-  task :off do
+  def turn_app_off
     puts 'Putting the app into maintenance mode ...'
-    puts `heroku maintenance:on --app #{APP}`
+    Bundler.with_clean_env { puts `heroku maintenance:on --app #{@app}` }
   end
 
-  task :on do
+  def turn_app_on
     puts 'Taking the app out of maintenance mode ...'
-    puts `heroku maintenance:off --app #{APP}`
+    Bundler.with_clean_env { puts `heroku maintenance:off --app #{@app}` }
   end
 
-  task :push_previous do
-    prefix = "#{APP}_release-"
+  def push_previous
+    prefix = "#{@app}_release-"
     releases = `git tag`.split("\n").select { |t| t[0..prefix.length-1] == prefix }.sort
     current_release = releases.last
     previous_release = releases[-2] if releases.length >= 2
@@ -57,18 +68,18 @@ namespace :deploy do
 
       puts "Removing tagged version '#{previous_release}' (now transformed in branch) ..."
       puts `git tag -d #{previous_release}`
-      puts `git push git@heroku.com:#{APP}.git :refs/tags/#{previous_release}`
+      puts `git push git@heroku.com:#{@app}.git :refs/tags/#{previous_release}`
 
       puts "Pushing '#{previous_release}' to Heroku master ..."
-      puts `git push git@heroku.com:#{APP}.git +#{previous_release}:master --force`
+      puts `git push git@heroku.com:#{@app}.git +#{previous_release}:master --force`
 
       puts "Deleting rollbacked release '#{current_release}' ..."
       puts `git tag -d #{current_release}`
-      puts `git push git@heroku.com:#{APP}.git :refs/tags/#{current_release}`
+      puts `git push git@heroku.com:#{@app}.git :refs/tags/#{current_release}`
 
       puts "Retagging release '#{previous_release}' in case to repeat this process (other rollbacks)..."
       puts `git tag -a #{previous_release} -m 'Tagged release'`
-      puts `git push --tags git@heroku.com:#{APP}.git`
+      puts `git push --tags git@heroku.com:#{@app}.git`
 
       puts "Turning local repo checked out on master ..."
       puts `git checkout master`
@@ -78,4 +89,29 @@ namespace :deploy do
       puts releases
     end
   end
+end
+
+namespace :deploy do
+  namespace :production do
+    task :migrations do
+      deployer = RakeHerokuDeployer.new(:production)
+      deployer.run_migrations
+    end
+
+    task :rollback do
+      deployer = RakeHerokuDeployer.new(:production)
+      deployer.rollback
+    end
+  end
+
+  task :production do
+    deployer = RakeHerokuDeployer.new(:production)
+    deployer.deploy
+  end
+end
+
+#Added to simplify process and run migrations every time. Just run rake deploy.
+task :deploy do
+  deployer = RakeHerokuDeployer.new(:production)
+  deployer.run_migrations
 end
