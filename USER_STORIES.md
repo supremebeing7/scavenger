@@ -10,9 +10,9 @@
 
 * As an unregistered user, I want to see public scavenger hunts / pub crawls.
 
+* As a registered user, I want to mark a crawl as DONE if I've completed it.
 
 ##INCOMPLETE
-* As a registered user, I want to mark a crawl as DONE if I've completed it.
 
 * As a registered user, I want to be able to edit or delete each place, all from the same screen.
 
