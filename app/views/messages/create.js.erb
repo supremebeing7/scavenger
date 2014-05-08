@@ -1,7 +1,9 @@
-$('#new_message').append('<li><%= @message.sender.name %>:' +
+<% broadcast "/messages" do %>
+  $('#new_message').append('<li><%= @message.sender.name %>:' +
           '<%= @message.content %><br>' +
           '<span class="timestamp">' +
           'Sent <%= @message.created_at.strftime("%r, %D") %>)' +
           '</span></li>');
+<% end %>
 $('#new_message_content').val('');
 
