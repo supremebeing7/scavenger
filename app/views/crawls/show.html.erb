@@ -12,6 +12,20 @@
       <% end %>
     </h6>
     <p><%= @crawl.description %></p>
+    <h2>Here's the route!</h2>
+      <ul>
+        <% @crawl.places.each do |place| %>
+          <li>
+            <%= link_to place.name, place %><br>
+            <%= place.address %><br>
+            "<%= place.description %>"<br>
+          </li>
+        <% end %>
+        <span id="added_places"></span>
+      </ul>
+    <% if @crawl.places.count == 0 %>
+      <h4 id="no_spots">No hunting spots yet...</h4>
+    <% end %>
   </div>
 
   <div class="col-sm-8">
@@ -23,35 +37,19 @@
       <%= render 'completed_crawls/form' %>
       <span id="marked_complete"></span>
     <% end %>
+    <br>
+    <br>
+    <% if @crawl.places.count > 0 %>
+      <div id="multi_markers" style='width: 400px; height: 400px;'></div>
+    <% end %>
   </div>
 </div>
-<% if @crawl.places.count > 0 %>
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>Here's the route!</h2>
-      <ul>
-        <% @crawl.places.each do |place| %>
-          <li>
-            <%= link_to place.name, place %><br>
-            <%= place.address %><br>
-            "<%= place.description %>"<br>
-          </li>
-        <% end %>
-        <span id="added_places"></span>
-      </ul>
-    </div>
-    <div class="col-sm-8" style='width: 400px;'>
-      <div id="multi_markers" style='width: 400px; height: 400px;'></div>
-    </div>
-  </div>
-  <script type="text/javascript">
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
-    markers = handler.addMarkers(<%=raw @hash.to_json %>);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-  });
-  </script>
-<% else %>
-  <h2>No hunting spots added yet!</h2>
-<% end %>
+
+<script type="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+</script>

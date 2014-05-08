@@ -1,5 +1,7 @@
 $('#new_place_form').remove();
+$('#no_spots').remove();
 $('#new_place').show();
+$('#multi_markers').show();
 $('#added_places').append('<li><%= link_to @place.name, @place %><br>' +
                           '<%= @place.address %><br>' +
                           '"<%= @place.description %>"<br></li>');

@@ -15,10 +15,7 @@ class PlacesController < ApplicationController
     @place = Place.new(place_params)
     if @place.save
       @crawl.places << @place if @crawl
-      respond_to do |format|
-        format.html { redirect_to @crawl, notice: "Thanks for adding #{@place.name}!" }
-        format.js
-      end
+      redirect_to @crawl, notice: "Thanks for adding #{@place.name}!"
     else
       render new_place_path
     end
