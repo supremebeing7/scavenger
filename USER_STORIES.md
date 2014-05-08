@@ -14,7 +14,7 @@
 
 ##INCOMPLETE
 
-* As a registered user, I want to be able to edit or delete each place, all from the same screen.
+* As a registered user, I want to be able to remove places and edit or delete each crawl, all from the same screen.
 
 * As a registered user, I want to add specific details and/or pictures about a place for a scavenger hunt / pub crawl.
 
@@ -33,4 +33,4 @@
 
 * As a registered user, I want to follow other users so that I can see any new crawls they make.
 
-
+* As a user, I want to be able to add places and crawls without being logged in, and then be able to register after adding and have them still show up as my crawls.
