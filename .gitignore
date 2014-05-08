@@ -15,8 +15,11 @@
 /log/*.log
 /tmp
 
-# Ignore API keys
+# Ignore ENV vars
 .env
+
+Ignore Faye credentials
+/config/initializers/faye_token.rb
 
 # Ignore uploaded photos
 /public/system/*.
