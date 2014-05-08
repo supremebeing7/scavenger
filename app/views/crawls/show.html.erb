@@ -13,9 +13,10 @@
     </h6>
     <p><%= @crawl.description %></p>
     <h2>Here's the route!</h2>
-      <ul>
+      <ul class="no_bullet">
         <% @crawl.places.each do |place| %>
           <li>
+            <%= link_to "✗", place, method: "delete", id: "destroy" %>
             <%= link_to place.name, place %><br>
             <%= place.address %><br>
             "<%= place.description %>"<br>

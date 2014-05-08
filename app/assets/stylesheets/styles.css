@@ -84,3 +84,23 @@ h4 {
 .glyphicon-map-marker {
   color: #B80000;
 }
+
+ul.no_bullet {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#destroy {
+  font-size: 30px;
+  color: red;
+  margin-left: -30px;
+  margin-right: 14px;
+  opacity:0.6;
+}
+
+#destroy:hover {
+  text-decoration: none;
+  font-weight: bolder;
+  opacity: 1.0;
+}
