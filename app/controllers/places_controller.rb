@@ -52,8 +52,7 @@ class PlacesController < ApplicationController
   def destroy
     @place = Place.find(params[:id])
     @place.destroy
-    flash[:notice] = "Account Deleted"
-    redirect_to places_path
+    redirect_to :back, notice: "Place Deleted"
   end
 
 private

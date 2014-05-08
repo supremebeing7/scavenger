@@ -544,6 +544,9 @@
       ],
       "/Users/epicodus/Code/scavenger/app/helpers/application_helper.rb": [
         1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/epicodus/Code/scavenger/spec/support/integration_spec_helper.rb": [
@@ -613,6 +616,25 @@
         null,
         null,
         null,
+        null,
+        null,
+        null
+      ],
+      "/Users/epicodus/Code/scavenger/spec/helpers/application_helper_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         null
@@ -814,6 +836,8 @@
         1,
         null,
         1,
+        null,
+        1,
         9,
         6,
         null,
@@ -842,6 +866,10 @@
         1,
         0,
         0,
+        0,
+        null,
+        0,
+        null,
         0,
         0,
         0,
@@ -886,6 +914,6 @@
         null
       ]
     },
-    "timestamp": 1399565920
+    "timestamp": 1399571899
   }
 }
