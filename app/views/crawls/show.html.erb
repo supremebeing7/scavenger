@@ -17,6 +17,8 @@
   <div class="col-sm-8">
     <% if current_user && @crawl.user_id == current_user.id %>
       <%= link_to "Add Hunting Spots", new_place_path(crawl_id: @crawl.id), id: "new_place", class: "btn btn-custom btn-lg", remote: true %>
+    <% elsif @completed_crawl.previously %>
+      <h1>Completed!</h1>
     <% else %>
       <%= render 'completed_crawls/form' %>
       <span id="marked_complete"></span>

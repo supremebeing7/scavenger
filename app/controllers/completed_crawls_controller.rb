@@ -6,17 +6,13 @@ class CompletedCrawlsController < ApplicationController
 
   def create
     @completed_crawl = CompletedCrawl.new(completed_crawl_params)
-    if @completed_crawl.previously
-      redirect_to current_user, notice: "You've already marked that one complete."
-    else
-      if @completed_crawl.save
-        respond_to do |format|
-          format.html { redirect_to current_user, notice: "Good job completing the scavenger hunt!" }
-          format.js
-        end
-      else
-        render 'new'
+    if @completed_crawl.save
+      respond_to do |format|
+        format.html { redirect_to current_user, notice: "Good job completing the scavenger hunt!" }
+        format.js
       end
+    else
+      render 'new'
     end
   end
 
