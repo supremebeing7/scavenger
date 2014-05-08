@@ -4,23 +4,22 @@
   <h1><%= @crawl.name %></h1>
   <div class="col-sm-4">
     <h5>Created by <%= link_to @crawl.user.name, @crawl.user %></h5>
-    <% if current_user && @crawl.user_id == current_user.id %>
-      <h6><%= link_to "Edit Hunt", edit_crawl_path(@crawl) %></h6>
-    <% end %>
-    <h6><%= link_to "Report Content", new_report_path(cid: @crawl.id) %></h6>
-
-
-
+    <h6>
+      <% if current_user && @crawl.user_id == current_user.id %>
+        <%= link_to "Edit Hunt", edit_crawl_path(@crawl) %>
+      <% else %>
+        <%= link_to "Report Content", new_report_path(cid: @crawl.id) %>
+      <% end %>
+    </h6>
     <p><%= @crawl.description %></p>
   </div>
 
   <div class="col-sm-8">
-    <% if current_user %>
-      <% if @crawl.user_id == current_user.id %>
-        <%= link_to "Add Hunting Spots", new_place_path(crawl_id: @crawl.id), class: "btn btn-custom btn-lg" %>
-      <% else %>
-        <%= render 'completed_crawls/form' %>
-      <% end %>
+    <% if current_user && @crawl.user_id == current_user.id %>
+      <%= link_to "Add Hunting Spots", new_place_path(crawl_id: @crawl.id), id: "new_place", class: "btn btn-custom btn-lg", remote: true %>
+    <% else %>
+      <%= render 'completed_crawls/form' %>
+      <span id="marked_complete"></span>
     <% end %>
   </div>
 </div>
@@ -28,7 +27,7 @@
   <div class="row">
     <div class="col-sm-4">
       <h2>Here's the route!</h2>
-      <ol>
+      <ul>
         <% @crawl.places.each do |place| %>
           <li>
             <%= link_to place.name, place %><br>
@@ -36,7 +35,8 @@
             "<%= place.description %>"<br>
           </li>
         <% end %>
-      </ol>
+        <span id="added_places"></span>
+      </ul>
     </div>
     <div class="col-sm-8" style='width: 400px;'>
       <div id="multi_markers" style='width: 400px; height: 400px;'></div>

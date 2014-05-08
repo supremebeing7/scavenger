@@ -1,0 +1,5 @@
+$('#new_place_form').remove();
+$('#new_place').show();
+$('#added_places').append('<li><%= link_to @place.name, @place %><br>' +
+                          '<%= @place.address %><br>' +
+                          '"<%= @place.description %>"<br></li>');

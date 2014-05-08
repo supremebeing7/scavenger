@@ -5,13 +5,15 @@ class CompletedCrawlsController < ApplicationController
   end
 
   def create
-    if CompletedCrawl.where(user_id: params[:completed_crawl][:user_id],
-                            crawl_id: params[:completed_crawl][:crawl_id]).exists?
+    @completed_crawl = CompletedCrawl.new(completed_crawl_params)
+    if @completed_crawl.previously
       redirect_to current_user, notice: "You've already marked that one complete."
     else
-      @completed_crawl = CompletedCrawl.new(completed_crawl_params)
       if @completed_crawl.save
-        redirect_to current_user, notice: "Good job completing the scavenger hunt!"
+        respond_to do |format|
+          format.html { redirect_to current_user, notice: "Good job completing the scavenger hunt!" }
+          format.js
+        end
       else
         render 'new'
       end

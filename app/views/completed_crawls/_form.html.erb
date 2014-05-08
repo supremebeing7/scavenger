@@ -1,5 +1,7 @@
-<%= form_for @completed_crawl do |f| %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.hidden_field :crawl_id, value: @crawl.id %>
-  <%= f.submit "Mark Hunt as Complete!", class: 'btn btn-custom' %>
-<% end %>
+<div id="completed_crawl_form">
+  <%= form_for @completed_crawl, remote: true do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :crawl_id, value: @crawl.id %>
+    <%= f.submit "Mark Hunt as Complete!", class: 'btn btn-custom' %>
+  <% end %>
+</div>
