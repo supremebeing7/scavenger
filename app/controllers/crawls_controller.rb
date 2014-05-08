@@ -19,7 +19,11 @@ class CrawlsController < ApplicationController
 
   def show
     @crawl = Crawl.find(params[:id])
-    @completed_crawl = CompletedCrawl.new(user_id: current_user.id, crawl_id: @crawl.id)
+    if current_user
+      @completed_crawl = CompletedCrawl.new(user_id: current_user.id, crawl_id: @crawl.id)
+    else
+      @completed_crawl = CompletedCrawl.new
+    end
     @hash = Gmaps4rails.build_markers(@crawl.places) do |place, marker|
       marker.lat place.latitude
       marker.lng place.longitude

@@ -32,6 +32,7 @@ group :test, :development do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'rerun'
+  gem 'simplecov'
 end
 
 group :test do
