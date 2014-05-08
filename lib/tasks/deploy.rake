@@ -2,7 +2,7 @@
 
 class RakeHerokuDeployer
   def initialize app_env
-    @app = ENV["SCAVENGER_APP"]
+    @app = ENV["#{app_env.to_s.upcase}_APP"]
   end
 
   def run_migrations
@@ -112,6 +112,6 @@ end
 
 #Added to simplify process and run migrations every time. Just run rake deploy.
 task :deploy do
-  deployer = RakeHerokuDeployer.new(:production)
+  deployer = RakeHerokuDeployer.new("production")
   deployer.run_migrations
 end
