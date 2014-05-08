@@ -108,3 +108,8 @@ ul.no_bullet {
 .message_window {
   padding: 20px;
 }
+
+.timestamp {
+  font-size: 10px;
+  color: gray;
+}

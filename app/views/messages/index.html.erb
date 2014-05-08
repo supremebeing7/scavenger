@@ -5,9 +5,15 @@
 <div class="message_window">
   <ul class="no_bullet">
     <% @messages.each do |message| %>
-      <li><%= message.content %><li>
+      <li>
+        <%= message.sender.name %>:
+        <%= message.content %><br>
+        <span class="timestamp">
+          Sent <%= message.created_at.strftime("%r, %D") %>)
+        </span>
+      <li>
     <% end %>
-    <span class="new_message"></span>
+    <span id="new_message"></span>
   <ul>
 </div>
 
