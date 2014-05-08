@@ -18,6 +18,7 @@ gem 'gmaps4rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'thin'
+gem 'faye'
 
 group :development do
   gem 'better_errors'
