@@ -16,11 +16,14 @@
       <ul class="no_bullet">
         <% @crawl.places.each do |place| %>
           <li>
-            <%= link_to "✗", place, method: "delete", id: "destroy" %>
+            <% if current_user && @crawl.user_id == current_user.id %>
+              <%= link_to "✗", place, method: "delete", id: "destroy" %>
+            <% end %>
             <%= link_to place.name, place %><br>
             <%= place.address %><br>
-            "<%= place.description %>"<br>
+            <em><%= place.description %></em><br>
           </li>
+          <br>
         <% end %>
         <span id="added_places"></span>
       </ul>

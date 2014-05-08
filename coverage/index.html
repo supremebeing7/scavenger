@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-08T09:18:40-07:00">2014-05-08T09:18:40-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-08T10:58:19-07:00">2014-05-08T10:58:19-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">89.64%</span></span>
+    (<span class="covered_percent"><span class="yellow">89.54%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.15
+         1.14
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>40</b> files in total.
-    <b>309</b> relevant lines. 
-    <span class="green"><b>277</b> lines covered</span> and
-    <span class="red"><b>32</b> lines missed </span>
+    <b>41</b> files in total.
+    <b>325</b> relevant lines. 
+    <span class="green"><b>291</b> lines covered</span> and
+    <span class="red"><b>34</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,20 +53,20 @@
       <tr>
         <td class="strong"><a href="#08647aa9fc83390a49495c48bb2ebb7208fc6a51" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>14</td>
-        <td>7</td>
-        <td>7</td>
+        <td>16</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>2.9</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#b8c05aeacdc26bf82915e0301f6cf4fb1f22baf1" class="src_link" title="app/controllers/crawls_controller.rb">app/controllers/crawls_controller.rb</a></td>
-        <td class="red strong">48.48 %</td>
-        <td>56</td>
-        <td>33</td>
+        <td class="red strong">45.71 %</td>
+        <td>60</td>
+        <td>35</td>
         <td>16</td>
-        <td>17</td>
+        <td>19</td>
         <td>0.5</td>
       </tr>
       
@@ -93,9 +93,9 @@
       <tr>
         <td class="strong"><a href="#dc5f550ed1675dbef648667edc3794cbd93a49f7" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -371,6 +371,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#31992eac9174b4ef86e5125f52c875f4f4dcb349" class="src_link" title="spec/helpers/application_helper_spec.rb">spec/helpers/application_helper_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>17</td>
+        <td>11</td>
+        <td>11</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#06f1a0dd9103c164cd1156b123ef351be2c112ed" class="src_link" title="spec/models/completed_crawl_spec.rb">spec/models/completed_crawl_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>24</td>
@@ -471,8 +481,8 @@
     <h3>app/controllers/application_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -525,7 +535,7 @@
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  protected</code>
+          <code class="ruby">  helper ApplicationHelper</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -537,28 +547,40 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
+          <code class="ruby">  protected</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def configure_permitted_parameters</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="11">
+        <li class="covered" data-hits="9" data-linenumber="13">
           <span class="hits">9</span>
           
           <code class="ruby">    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :username, :email, :password) }</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="12">
+        <li class="covered" data-hits="6" data-linenumber="14">
           <span class="hits">6</span>
           
           <code class="ruby">    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :username, :email, :password) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
@@ -571,11 +593,11 @@
         <div class="source_table" id="b8c05aeacdc26bf82915e0301f6cf4fb1f22baf1">
   <div class="header">
     <h3>app/controllers/crawls_controller.rb</h3>
-    <h4><span class="red">48.48 %</span> covered</h4>
+    <h4><span class="red">45.71 %</span> covered</h4>
     <div>
-      <b>33</b> relevant lines. 
+      <b>35</b> relevant lines. 
       <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>17</b> lines missed.</span>
+      <span class="red"><b>19</b> lines missed.</span>
     </div>
   </div>
   
@@ -711,67 +733,67 @@
         <li class="missed" data-hits="0" data-linenumber="22">
           
           
-          <code class="ruby">    @completed_crawl = CompletedCrawl.new(user_id: current_user.id, crawl_id: @crawl.id)</code>
+          <code class="ruby">    if current_user</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="23">
           
           
-          <code class="ruby">    @hash = Gmaps4rails.build_markers(@crawl.places) do |place, marker|</code>
+          <code class="ruby">      @completed_crawl = CompletedCrawl.new(user_id: current_user.id, crawl_id: @crawl.id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">      marker.lat place.latitude</code>
+          <code class="ruby">    else</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="25">
           
           
-          <code class="ruby">      marker.lng place.longitude</code>
+          <code class="ruby">      @completed_crawl = CompletedCrawl.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
-          
-          <code class="ruby">      marker.infowindow render_to_string(:partial =&gt; &quot;/places/details&quot;, :locals =&gt; { :object =&gt; place})</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
-          
-          <code class="ruby">      marker.json({name: place.name})</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    @hash = Gmaps4rails.build_markers(@crawl.places) do |place, marker|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      marker.lat place.latitude</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="29">
           
-          <code class="ruby">  def edit</code>
+          
+          <code class="ruby">      marker.lng place.longitude</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="missed" data-hits="0" data-linenumber="30">
           
           
-          <code class="ruby">    @crawl = Crawl.find(params[:id])</code>
+          <code class="ruby">      marker.infowindow render_to_string(:partial =&gt; &quot;/places/details&quot;, :locals =&gt; { :object =&gt; place})</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">      marker.json({name: place.name})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -789,7 +811,7 @@
         <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update</code>
+          <code class="ruby">  def edit</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="36">
@@ -798,112 +820,112 @@
           <code class="ruby">    @crawl = Crawl.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">    if @crawl.update(crawl_params)</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">      redirect_to @crawl</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    else</code>
+          <code class="ruby">  def update</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="40">
           
           
-          <code class="ruby">      render &#39;edit&#39;</code>
+          <code class="ruby">    @crawl = Crawl.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="missed" data-hits="0" data-linenumber="41">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    if @crawl.update(crawl_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="missed" data-hits="0" data-linenumber="42">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      redirect_to @crawl</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">      render &#39;edit&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="45">
+        <li class="missed" data-hits="0" data-linenumber="49">
           
           
           <code class="ruby">    @crawl = crawl.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
+        <li class="missed" data-hits="0" data-linenumber="50">
           
           
           <code class="ruby">    @crawl.destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="47">
+        <li class="missed" data-hits="0" data-linenumber="51">
           
           
           <code class="ruby">    redirect_to crawls_path, notice: &quot;Crawl Deleted.&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
           <code class="ruby">private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def crawl_params</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    params.require(:crawl).permit(:name, :description, :user_id, :public)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
@@ -912,7 +934,31 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def crawl_params</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    params.require(:crawl).permit(:name, :description, :user_id, :public)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">end</code>
@@ -1041,8 +1087,8 @@
     <h3>app/helpers/application_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1056,7 +1102,25 @@
           <code class="ruby">module ApplicationHelper</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def can(object)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    current_user &amp;&amp; current_user.id == object.user_id</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
@@ -5068,6 +5132,126 @@
           
           
           <code class="ruby"># end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="31992eac9174b4ef86e5125f52c875f4f4dcb349">
+  <div class="header">
+    <h3>spec/helpers/application_helper_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;spec_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe ApplicationHelper do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;can&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before :each do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @user = create :user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @crawl = build :crawl</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @crawl.update(user_id: @user.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @crawl.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @completed_crawl = CompletedCrawl.create(crawl_id: @crawl.id, user_id: @user.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;should return true if current_user exists and the object passed blongs to user&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      can(@crawl).should eq true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">end</code>
         </li>
       
     </ol>
