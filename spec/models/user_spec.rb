@@ -10,10 +10,13 @@ describe User do
   it { should have_many :crawls }
   it { should have_many :reports }
   it { should have_many :completed_crawls }
+  it { should have_many(:received_messages).class_name('Message').with_foreign_key("to_id") }
+  it { should have_many(:sent_messages).class_name('Message').with_foreign_key("from_id") }
+
 
   describe "full_size_pic" do
     before do
-      @user = FactoryGirl.create :user
+      @user = create :user
     end
     it "takes a photo url from Google+ and slices off the end to make it full-sized" do
       @user.photo_url = "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50"

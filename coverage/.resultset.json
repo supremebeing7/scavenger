@@ -444,6 +444,14 @@
         null,
         null
       ],
+      "/Users/epicodus/Code/scavenger/spec/factories/messages.rb": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/epicodus/Code/scavenger/spec/factories/places.rb": [
         null,
         null,
@@ -504,6 +512,9 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
         null,
         1,
         0,
@@ -543,8 +554,6 @@
         null
       ],
       "/Users/epicodus/Code/scavenger/app/helpers/application_helper.rb": [
-        1,
-        1,
         1,
         null,
         null
@@ -620,25 +629,6 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/helpers/application_helper_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
       "/Users/epicodus/Code/scavenger/spec/models/completed_crawl_spec.rb": [
         1,
         null,
@@ -701,6 +691,20 @@
         2,
         2,
         2,
+        null
+      ],
+      "/Users/epicodus/Code/scavenger/spec/models/message_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/epicodus/Code/scavenger/app/models/message.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "/Users/epicodus/Code/scavenger/spec/models/place_spec.rb": [
@@ -784,6 +788,9 @@
         2,
         2,
         2,
+        2,
+        2,
+        null,
         null,
         1,
         1,
@@ -796,22 +803,6 @@
         1,
         1,
         1,
-        null,
-        null,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/app/mailers/report_mailer.rb": [
-        1,
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        1,
-        2,
-        2,
-        2,
         null,
         null,
         null
@@ -828,8 +819,6 @@
       "/Users/epicodus/Code/scavenger/app/controllers/application_controller.rb": [
         1,
         null,
-        null,
-        1,
         null,
         1,
         null,
@@ -912,8 +901,24 @@
         1,
         null,
         null
+      ],
+      "/Users/epicodus/Code/scavenger/app/mailers/report_mailer.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1399571899
+    "timestamp": 1399574910
   }
 }

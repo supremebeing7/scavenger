@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
   has_many :crawls
   has_many :reports
   has_many :completed_crawls, dependent: :destroy
+  has_many :sent_messages, :class_name => 'Message', :foreign_key => 'from_id'
+  has_many :received_messages, :class_name => 'Message', :foreign_key => 'to_id'
+
 
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info

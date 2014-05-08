@@ -1,7 +1,7 @@
 <div id="new_place_form">
 <%= render 'layouts/errors', object: @place %>
 
-  <%= form_for @place, :html => { :multipart => true }  do |f| %>
+  <%= form_for @place do |f| %>
     <div class='form-group'>
       <%= f.text_field :name, :placeholder => 'Name'  %>
     </div>

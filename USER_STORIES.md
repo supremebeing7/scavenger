@@ -12,14 +12,15 @@
 
 * As a registered user, I want to mark a crawl as DONE if I've completed it.
 
+* As a registered user, I want to be able to remove places and edit or delete each crawl, all from the same screen.
+
 ##INCOMPLETE
 
-* As a registered user, I want to be able to remove places and edit or delete each crawl, all from the same screen.
+* As a registered user, I want to be able to send chat messages to other users working on the same hunt so that I can see how far they are in a hunt. (Use Faye websockets.)
 
 * As a registered user, I want to add specific details and/or pictures about a place for a scavenger hunt / pub crawl.
 
 * As a registered user, I want to be able to favorite other user-created hunts/crawls so I can more easily find them next time.
-
 
 * As an unregistered user, I want to be able to check in at a place and be able to upload a picture or answer a question in order to get the next clue.
 
