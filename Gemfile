@@ -19,6 +19,9 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'thin'
 gem 'faye'
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
 
 group :development do
   gem 'better_errors'

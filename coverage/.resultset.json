@@ -1,16 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/epicodus/Code/scavenger/config/environment.rb": [
+      "/Users/epicodus/code/scavenger/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/epicodus/Code/scavenger/config/application.rb": [
+      "/Users/epicodus/code/scavenger/config/application.rb": [
         1,
         null,
+        1,
         1,
         null,
         null,
@@ -33,13 +34,13 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/config/boot.rb": [
+      "/Users/epicodus/code/scavenger/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/epicodus/Code/scavenger/config/environments/test.rb": [
+      "/Users/epicodus/code/scavenger/config/environments/test.rb": [
         1,
         null,
         null,
@@ -79,7 +80,7 @@
         1,
         null
       ],
-      "/Users/epicodus/Code/scavenger/config/initializers/backtrace_silencers.rb": [
+      "/Users/epicodus/code/scavenger/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -88,7 +89,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/config/initializers/devise.rb": [
+      "/Users/epicodus/code/scavenger/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -348,13 +349,13 @@
         1,
         null
       ],
-      "/Users/epicodus/Code/scavenger/config/initializers/filter_parameter_logging.rb": [
+      "/Users/epicodus/code/scavenger/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/epicodus/Code/scavenger/config/initializers/inflections.rb": [
+      "/Users/epicodus/code/scavenger/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -372,14 +373,14 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/config/initializers/mime_types.rb": [
+      "/Users/epicodus/code/scavenger/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/config/initializers/secret_token.rb": [
+      "/Users/epicodus/code/scavenger/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -393,12 +394,12 @@
         null,
         1
       ],
-      "/Users/epicodus/Code/scavenger/config/initializers/session_store.rb": [
+      "/Users/epicodus/code/scavenger/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/epicodus/Code/scavenger/config/initializers/wrap_parameters.rb": [
+      "/Users/epicodus/code/scavenger/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -414,7 +415,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/factories/completed_crawls.rb": [
+      "/Users/epicodus/code/scavenger/spec/factories/completed_crawls.rb": [
         null,
         null,
         1,
@@ -424,7 +425,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/factories/crawl_places.rb": [
+      "/Users/epicodus/code/scavenger/spec/factories/crawl_places.rb": [
         null,
         null,
         1,
@@ -434,7 +435,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/factories/crawls.rb": [
+      "/Users/epicodus/code/scavenger/spec/factories/crawls.rb": [
         null,
         null,
         1,
@@ -444,7 +445,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/factories/messages.rb": [
+      "/Users/epicodus/code/scavenger/spec/factories/messages.rb": [
         null,
         null,
         1,
@@ -452,29 +453,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/factories/places.rb": [
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/spec/factories/reports.rb": [
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/spec/factories/users.rb": [
+      "/Users/epicodus/code/scavenger/spec/factories/places.rb": [
         null,
         null,
         1,
@@ -487,7 +466,30 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/config/routes.rb": [
+      "/Users/epicodus/code/scavenger/spec/factories/reports.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/spec/factories/users.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/config/routes.rb": [
+        1,
         1,
         1,
         1,
@@ -499,7 +501,7 @@
         1,
         null
       ],
-      "/Users/epicodus/Code/scavenger/app/models/user.rb": [
+      "/Users/epicodus/code/scavenger/app/models/user.rb": [
         1,
         null,
         null,
@@ -553,19 +555,23 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/app/helpers/application_helper.rb": [
+      "/Users/epicodus/code/scavenger/app/helpers/application_helper.rb": [
         1,
+        1,
+        0,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/support/integration_spec_helper.rb": [
+      "/Users/epicodus/code/scavenger/spec/support/integration_spec_helper.rb": [
         1,
         1,
         0,
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/support/utilities.rb": [
+      "/Users/epicodus/code/scavenger/spec/support/utilities.rb": [
         1,
         2,
         2,
@@ -587,7 +593,7 @@
         1,
         null
       ],
-      "/Users/epicodus/Code/scavenger/app/models/crawl.rb": [
+      "/Users/epicodus/code/scavenger/app/models/crawl.rb": [
         1,
         1,
         1,
@@ -597,7 +603,7 @@
         1,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/features/user_pages_spec.rb": [
+      "/Users/epicodus/code/scavenger/spec/features/user_pages_spec.rb": [
         1,
         null,
         1,
@@ -629,7 +635,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/spec/models/completed_crawl_spec.rb": [
+      "/Users/epicodus/code/scavenger/spec/models/completed_crawl_spec.rb": [
         1,
         null,
         1,
@@ -642,158 +648,6 @@
         2,
         2,
         2,
-        2,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/app/models/completed_crawl.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/spec/models/crawl_place_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/app/models/crawl_place.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/spec/models/crawl_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/spec/models/message_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/app/models/message.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/spec/models/place_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/app/models/place.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/spec/models/report_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/app/models/report.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/spec/models/user_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null,
-        null,
-        1,
-        1,
         2,
         null,
         1,
@@ -807,7 +661,175 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/app/controllers/pages_controller.rb": [
+      "/Users/epicodus/code/scavenger/app/models/completed_crawl.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/spec/models/crawl_place_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/app/models/crawl_place.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/spec/models/crawl_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/spec/models/message_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/app/models/message.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/spec/models/place_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/app/models/place.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/spec/models/report_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/app/models/report.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/app/mailers/report_mailer.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/epicodus/code/scavenger/app/controllers/pages_controller.rb": [
         1,
         null,
         1,
@@ -816,7 +838,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/app/controllers/application_controller.rb": [
+      "/Users/epicodus/code/scavenger/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -832,7 +854,7 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/app/controllers/crawls_controller.rb": [
+      "/Users/epicodus/code/scavenger/app/controllers/crawls_controller.rb": [
         1,
         1,
         1,
@@ -894,31 +916,15 @@
         null,
         null
       ],
-      "/Users/epicodus/Code/scavenger/app/controllers/users_controller.rb": [
+      "/Users/epicodus/code/scavenger/app/controllers/users_controller.rb": [
         1,
         1,
         1,
         1,
-        null,
-        null
-      ],
-      "/Users/epicodus/Code/scavenger/app/mailers/report_mailer.rb": [
-        1,
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        1,
-        2,
-        2,
-        2,
-        null,
         null,
         null
       ]
     },
-    "timestamp": 1399574910
+    "timestamp": 1400001807
   }
 }
