@@ -16,7 +16,7 @@
 
 ##INCOMPLETE
 
-* As a registered user, I want to be able to send chat messages to other users working on the same hunt so that I can see how far they are in a hunt. (Use Faye websockets.)
+* As a registered user, I want to be able to send chat messages to other users working on the same hunt so that I can see how far they are in a hunt. (Use Pusher websockets. Partially setup right now with Faye.)
 
 * As a registered user, I want to add specific details and/or pictures about a place for a scavenger hunt / pub crawl.
 
