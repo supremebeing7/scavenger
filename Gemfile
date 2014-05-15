@@ -10,7 +10,6 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
-gem 'faker'
 gem 'launchy'
 gem 'rest-client'
 gem 'geocoder'
@@ -20,20 +19,21 @@ gem 'omniauth-google-oauth2'
 gem 'thin'
 gem 'faye'
 gem 'sidekiq'
-gem 'sinatra', require: false
-gem 'slim'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'sinatra', require: false
+  gem 'slim'
 end
 
 group :test, :development do
+  gem 'faker'
   gem 'rspec-rails'
   gem 'letter_opener'
   gem 'pry'
-  gem 'dotenv-rails'
+  gem 'dotenv'
   gem 'factory_girl_rails'
   gem 'rerun'
   gem 'simplecov'
