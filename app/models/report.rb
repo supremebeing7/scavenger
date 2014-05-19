@@ -6,7 +6,13 @@ class Report < ActiveRecord::Base
   after_create :send_report_email
 
   def send_report_email
-    ReportMailer.delay.admin_report(self)
-    ReportMailer.delay.user_report(self)
+    # Disable Sidekiq on production until ready to launch - costs money on Heroku.
+    if Rails.env.development?
+      ReportMailer.delay.admin_report(self)
+      ReportMailer.delay.user_report(self)
+    else
+      ReportMailer.admin_report(self).deliver
+      ReportMailer.user_report(self).deliver
+    end
   end
 end

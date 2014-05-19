@@ -1,4 +1,3 @@
-require 'sidekiq/web'
 
 Scavenger::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
@@ -10,5 +9,9 @@ Scavenger::Application.routes.draw do
   resources :completed_crawls, except: [:show]
   resources :messages, except: [:edit, :update]
   root to: "pages#home"
-  # mount Sidekiq::Web, at: "/sidekiq" if Rails.env.development?
+
+  if Rails.env.development?
+    require 'sidekiq/web'
+    mount Sidekiq::Web, at: "/sidekiq"
+  end
 end

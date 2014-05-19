@@ -18,12 +18,12 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'thin'
 gem 'faye'
-gem 'sidekiq'
-gem 'sinatra', require: false
-gem 'slim'
 gem 'foreman'
 
 group :development do
+  gem 'sidekiq'
+  gem 'sinatra', require: false
+  gem 'slim'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
