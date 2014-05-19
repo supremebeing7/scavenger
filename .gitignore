@@ -18,8 +18,8 @@
 # Ignore API keys
 .env
 
-# Ignore uploaded photos
-/public/system/*.
+# Ignore public
+/public/**
 
 # Ignore test coverage
 /coverage/.
