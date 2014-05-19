@@ -1,6 +1,8 @@
 Sidekiq.configure_client do |config|
-  config.redis = { :url => ENV['SIDEKIQ_REDIS_URL'], :namespace => 'mynamespace', :size => 1 }
+  namespace= ENV['RACK_ENV']=='production' ? 'sidekiq' : 'sidekiq-dev'
+  config.redis = { :url => ENV['SIDEKIQ_REDIS_URL'], :namespace => namespace, :size => 1 }
 end
 Sidekiq.configure_server do |config|
-  config.redis = { :url => ENV['SIDEKIQ_REDIS_URL'], :namespace => 'mynamespace', :size => 2 }
+  namespace= ENV['RACK_ENV']=='production' ? 'sidekiq' : 'sidekiq-dev'
+  config.redis = { :url => ENV['SIDEKIQ_REDIS_URL'], :namespace => namespace, :size => 2 }
 end

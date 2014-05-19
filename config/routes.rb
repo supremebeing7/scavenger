@@ -10,5 +10,5 @@ Scavenger::Application.routes.draw do
   resources :completed_crawls, except: [:show]
   resources :messages, except: [:edit, :update]
   root to: "pages#home"
-  mount Sidekiq::Web, at: "/sidekiq" if Rails.env.development?
+  # mount Sidekiq::Web, at: "/sidekiq" if Rails.env.development?
 end
