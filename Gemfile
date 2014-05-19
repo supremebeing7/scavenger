@@ -21,6 +21,7 @@ gem 'faye'
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
+gem 'foreman'
 
 group :development do
   gem 'better_errors'
