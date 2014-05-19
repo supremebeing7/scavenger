@@ -20,3 +20,6 @@
 
 # Ignore uploaded photos
 /public/system/*.
+
+# Ignore test coverage
+/coverage/.
