@@ -19,7 +19,7 @@
 .env
 
 # Ignore public
-/public/**
+/public
 
 # Ignore test coverage
-/coverage/**
+/coverage/
