@@ -16,11 +16,11 @@ gem 'gmaps4rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'thin'
+gem 'foreman'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'quiet_assets'
   gem 'pry'
   gem 'rerun'
 end
@@ -29,6 +29,8 @@ group :test, :development do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'guard-bundler', require: false
+  gem 'guard-rspec', require: false
 end
 
 group :test do
