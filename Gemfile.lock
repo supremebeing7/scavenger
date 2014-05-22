@@ -99,8 +99,6 @@ GEM
       multi_json (>= 1.5)
     launchy (2.4.2)
       addressable (~> 2.3)
-    letter_opener (1.2.0)
-      launchy (~> 2.2)
     listen (2.7.4)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
@@ -266,7 +264,6 @@ DEPENDENCIES
   gmaps4rails
   jquery-rails
   launchy
-  letter_opener
   omniauth
   omniauth-google-oauth2
   pg

@@ -10,8 +10,6 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
-gem 'faker'
-gem 'launchy'
 gem 'rest-client'
 gem 'geocoder'
 gem 'gmaps4rails'
@@ -23,16 +21,14 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'pry'
+  gem 'rerun'
 end
 
 group :test, :development do
-  gem 'rspec-rails'
-  gem 'letter_opener'
-  gem 'pry'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
-  gem 'rerun'
-  gem 'simplecov'
+  gem 'faker'
 end
 
 group :test do
@@ -40,6 +36,9 @@ group :test do
   gem 'shoulda'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'simplecov'
 end
 
 group :production do
