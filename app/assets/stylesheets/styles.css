@@ -1,13 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+
 #main {
-  margin-top: 25px;
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+#footer {
+  height: 60px;
+  border-top: #B8B8B8;
+  background-color: #E6E6E6;
+  text-align: center;
 }
 
 img.avatar{
   width:200px;
 }
 
-.pad-top {
-  padding-top: 20px;
+#recently-added {
+  font-size: 1.3em;
+  line-height:160%
 }
 
 .navbar-sized {
@@ -16,6 +32,11 @@ img.avatar{
 
 .nav-photo {
   border-radius: 20px;
+}
+
+.jumbotron {
+  background: none;
+  line-height:220%
 }
 
 body {
