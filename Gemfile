@@ -19,6 +19,7 @@ gem 'thin'
 gem 'foreman'
 
 group :development do
+  gem 'sprockets_better_errors'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry'

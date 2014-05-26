@@ -241,6 +241,10 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sprockets_better_errors (0.0.5)
+      actionpack (< 4.1)
+      activesupport (< 4.1)
+      sprockets-rails (>= 1.0.0)
     thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -300,6 +304,7 @@ DEPENDENCIES
   selenium-webdriver
   shoulda
   simplecov
+  sprockets_better_errors
   thin
   turbolinks
   uglifier (>= 1.3.0)
