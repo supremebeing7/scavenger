@@ -6,12 +6,9 @@ class FeedbacksController < ApplicationController
 
   def create
     @feedback = Feedback.create(email: params[:email], message: params[:message])
-    redirect_to :back, notice: "Thanks for the feedback!"
-  end
-
-  private
-
-  def feedback_params
-    params.require(:feedback).permit(:email, :message)
+    respond_to do |format|
+      format.html { redirect_to :back, notice: "Thanks for the feedback!" }
+      format.js
+    end
   end
 end
