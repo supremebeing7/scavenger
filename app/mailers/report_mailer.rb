@@ -3,7 +3,7 @@ class ReportMailer < ActionMailer::Base
 
   def admin_report(report)
     @report = report
-    mail to: "markopolo@gmail.com", subject: "Content Report Submitted"
+    mail to: ENV['ADMIN_EMAIL_ADDRESS'], subject: "Content Report Submitted"
   end
   def user_report(report)
     @report = report
