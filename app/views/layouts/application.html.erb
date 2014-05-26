@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fluid">
-  <div class="container">
+  <div class="container" id="contact_us_success">
     <%= link_to "Scavenger", root_url,
         :class => "navbar-text navbar-left brand" %>
     <% if user_signed_in? %>
@@ -33,12 +33,19 @@
 </div>
 
 <div class="container" id="main">
-  <div class="bold-red">
+  <div class="row bold-red">
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, id: "flash_#{name}" %>
     <% end %>
   </div>
+
   <%= yield %>
+
+  <div id="footer" class="row">
+    © <%= Time.now.strftime("%Y") %> Mark J. Lehman  |
+    <%= link_to "Github", "https://github.com/supremebeing7/" %>  |
+    <%= link_to "Contact Us", new_feedback_path %>
+  </div>
 </div>
 
 </body>
