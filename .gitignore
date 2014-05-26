@@ -17,6 +17,7 @@
 
 # Ignore API keys
 .env
+Procfile
 
 # Ignore public
 /public
