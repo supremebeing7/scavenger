@@ -1,7 +1,0 @@
-<%= form_for @feedback do |f| %>
-  <div class="form-group">
-    <%= f.text_area :message, :placeholder => 'What could we do better or worse?', rows: 8, cols: 50 %>
-  </div>
-  <%= f.hidden_field :email, value: current_user.email if current_user %>
-  <%= f.submit(:class => "btn btn-custom") %>
-<% end %>

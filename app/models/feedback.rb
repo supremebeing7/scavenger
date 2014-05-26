@@ -1,7 +1,7 @@
 class Feedback
   attr_reader(:message, :email)
 
-  def initialize(attributes)
+  def initialize(attributes = {})
     @email = attributes[:email]
     @message = attributes[:message]
   end
