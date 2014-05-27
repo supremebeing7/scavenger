@@ -11,6 +11,6 @@
   <div class="form-group">
     <%= f.text_area :description, :placeholder => 'Description', rows: 8, cols: 50 %>
   </div>
-  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :user_id, value: current_user.id if current_user %>
   <%= f.submit(:class => "btn btn-custom") %>
 <% end %>

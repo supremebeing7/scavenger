@@ -1,5 +1,4 @@
 class Report < ActiveRecord::Base
-  validates :description, presence: true
   belongs_to :place
   belongs_to :crawl
   belongs_to :user

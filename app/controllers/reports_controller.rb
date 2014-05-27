@@ -18,7 +18,7 @@ class ReportsController < ApplicationController
         redirect_to @report.crawl
       end
     else
-      render new_report_path
+      redirect_to new_report_path
     end
   end
 

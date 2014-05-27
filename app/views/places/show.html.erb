@@ -1,9 +1,11 @@
 <%= content_for :title, @place.name %>
 
+<%= render 'reports/modal' %>
+
 <div class="row">
   <div class="col-sm-4">
     <h1><%= @place.name %></h1>
-    <h6><%= link_to "Report Content", new_report_path(pid: @place.id) %></h6>
+    <h6><%= link_to "Report Content", "#", :data => {:toggle => "modal", :target => ".bs-example-modal-sm"} %></h6>
 
 
     <p><%= @place.description %></p>

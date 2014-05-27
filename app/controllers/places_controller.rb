@@ -22,6 +22,7 @@ class PlacesController < ApplicationController
   end
 
   def show
+    @report = Report.new
     @place = Place.find(params[:id])
     @places = [@place]
     @name = @place.name
