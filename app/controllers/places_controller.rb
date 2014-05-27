@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
     @place = Place.new(place_params)
     if @place.save
       @crawl.places << @place if @crawl
-      redirect_to @crawl, notice: "Thanks for adding #{@place.name}!"
+      redirect_to @crawl, success: "Thanks for adding #{@place.name}!"
     else
       render new_place_path
     end
@@ -41,10 +41,10 @@ class PlacesController < ApplicationController
   def update
     @place = Place.find(params[:id])
     if @place.update(place_params)
-      flash[:notice] = "Thanks for the update to #{@place.name}!"
+      flash[:success] = "Thanks for the update to #{@place.name}!"
       redirect_to place_path(@place)
     else
-      flash[:notice] = 'Failed to Update'
+      flash[:danger] = 'Failed to Update'
       render edit_place_path(@place)
     end
   end
@@ -52,7 +52,7 @@ class PlacesController < ApplicationController
   def destroy
     @place = Place.find(params[:id])
     @place.destroy
-    redirect_to :back, notice: "Place Deleted"
+    redirect_to :back, success: "Place Deleted"
   end
 
 private

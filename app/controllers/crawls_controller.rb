@@ -7,7 +7,7 @@ class CrawlsController < ApplicationController
   def create
     @crawl = Crawl.new(crawl_params)
     if @crawl.save
-      redirect_to current_user, notice: "Crawl Added."
+      redirect_to current_user, success: "Crawl Added."
     else
       render 'new'
     end
@@ -48,7 +48,7 @@ class CrawlsController < ApplicationController
   def destroy
     @crawl = crawl.find(params[:id])
     @crawl.destroy
-    redirect_to crawls_path, notice: "Crawl Deleted."
+    redirect_to crawls_path, success: "Crawl Deleted."
   end
 
 private
