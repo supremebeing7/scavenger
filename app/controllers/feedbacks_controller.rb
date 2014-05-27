@@ -6,9 +6,7 @@ class FeedbacksController < ApplicationController
 
   def create
     @feedback = Feedback.create(email: params[:email], message: params[:message])
-    respond_to do |format|
-      format.html { redirect_to root_path, success: "Thanks for the feedback!" }
-      format.js
-    end
+    flash[:success] = "Thanks for the feedback!"
+    redirect_to root_path
   end
 end

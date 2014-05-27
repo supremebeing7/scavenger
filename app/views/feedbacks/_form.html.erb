@@ -1,15 +1,16 @@
 <div id="feedback_form">
-  <%= form_tag({:action => :create}, {:remote => true}) do %>
+  <%= form_tag(:controller => :feedbacks, :action => :create) do %>
     <div class="form-group">
       <% if current_user %>
         <%= hidden_field_tag :email, value: current_user.email %>
       <% else %>
-        <%= email_field_tag :email, nil, placeholder: "Email" %>
+        <%= email_field_tag :email, nil, placeholder: "Your email address" %>
       <% end %>
     </div>
     <div class="form-group">
       <%= text_area_tag :message, nil, :placeholder => 'What could we do better or worse?', rows: 8, cols: 50 %>
     </div>
+    <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
     <%= submit_tag "Send feedback", :class => "btn btn-custom" %>
   <% end %>
 </div>
