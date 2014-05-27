@@ -11,10 +11,10 @@ class ReportsController < ApplicationController
     @report = Report.new(report_params)
     if @report.save
       if @report.place_id
-        flash[:notice] = "Thanks for reporting #{@report.place.name}!"
+        flash[:success] = "Thanks for reporting #{@report.place.name}!"
         redirect_to @report.place
       else
-        flash[:notice] = "Thanks for reporting #{@report.crawl.name}!"
+        flash[:success] = "Thanks for reporting #{@report.crawl.name}!"
         redirect_to @report.crawl
       end
     else

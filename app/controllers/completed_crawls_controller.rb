@@ -8,7 +8,7 @@ class CompletedCrawlsController < ApplicationController
     @completed_crawl = CompletedCrawl.new(completed_crawl_params)
     if @completed_crawl.save
       respond_to do |format|
-        format.html { redirect_to current_user, notice: "Good job completing the scavenger hunt!" }
+        format.html { redirect_to current_user, success: "Good job completing the scavenger hunt!" }
         format.js
       end
     else
@@ -36,7 +36,7 @@ class CompletedCrawlsController < ApplicationController
   def destroy
     @completed_crawl = CompletedCrawl.find(params[:id])
     @completed_crawl.destroy
-    redirect_to completed_crawls_path, notice: "Changed back to 'Not Done.'"
+    redirect_to completed_crawls_path, success: "Changed back to 'Not Done.'"
   end
 
 private
