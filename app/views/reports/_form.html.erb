@@ -1,6 +1,5 @@
 <div id="report_form">
   <h1>Submit a report</h1>
-  <%= render 'layouts/errors', object: @report %>
 
   <%= form_for @report, :html => { :multipart => true } do |f| %>
     <div class="form-group">
