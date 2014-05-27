@@ -1,5 +1,13 @@
 <%= content_for :title, @crawl.name %>
-
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="container">
+        <%= render 'reports/form' %>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="row">
   <h1><%= @crawl.name %></h1>
   <div class="col-sm-4">
@@ -8,7 +16,7 @@
       <% if current_user && @crawl.user_id == current_user.id %>
         <%= link_to "Edit Hunt", edit_crawl_path(@crawl) %>
       <% else %>
-        <%= link_to "Report Content", new_report_path(cid: @crawl.id) %>
+        <%= link_to "Report Content", "#", :data => {:toggle => "modal", :target => ".bs-example-modal-sm"} %>
       <% end %>
     </h6>
     <p><%= @crawl.description %></p>
