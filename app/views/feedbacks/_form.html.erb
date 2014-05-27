@@ -1,6 +1,6 @@
 <div id="feedback_form">
   <h1>What's on your mind?</h1>
-  <%= form_tag(:controller => :feedbacks, :action => :create) do %>
+  <%= form_tag feedbacks_path do %>
     <div class="form-group">
       <% if current_user %>
         <%= hidden_field_tag :email, value: current_user.email %>
