@@ -18,6 +18,7 @@ class CrawlsController < ApplicationController
   end
 
   def show
+    @report = Report.new
     @crawl = Crawl.find(params[:id])
     if current_user
       @completed_crawl = CompletedCrawl.new(user_id: current_user.id, crawl_id: @crawl.id)

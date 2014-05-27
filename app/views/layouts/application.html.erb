@@ -12,24 +12,22 @@
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fluid">
-    <div class="container" id="contact_us_success">
-      <%= link_to "Scavenger", root_url,
-          :class => "navbar-text navbar-left brand" %>
-      <% if user_signed_in? %>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete,
-            :class => "navbar-text navbar-right" %>
-        <%= image_tag current_user.photo_url, :class => "nav-photo navbar-right" %>
-        <%= link_to current_user.name, current_user,
-            :class => "navbar-text navbar-right" %>
-        <span class="navbar-text navbar-right">Logged in as </span>
-      <% else %>
-        <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), :class => "navbar-text navbar-right" %>
-        <%= link_to "Sign in", new_user_session_path,
-            :class => "navbar-text navbar-right" %>
-        <%= link_to "Sign up", new_user_registration_path,
-            :class => "navbar-text navbar-right" %>
-      <% end %>
-    </div>
+    <%= link_to "Scavenger", root_url,
+        :class => "navbar-text navbar-left brand" %>
+    <% if user_signed_in? %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete,
+          :class => "navbar-text navbar-right" %>
+      <%= image_tag current_user.photo_url, :class => "nav-photo navbar-right" %>
+      <%= link_to current_user.name, current_user,
+          :class => "navbar-text navbar-right" %>
+      <span class="navbar-text navbar-right">Logged in as </span>
+    <% else %>
+      <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2), :class => "navbar-text navbar-right" %>
+      <%= link_to "Sign in", new_user_session_path,
+          :class => "navbar-text navbar-right" %>
+      <%= link_to "Sign up", new_user_registration_path,
+          :class => "navbar-text navbar-right" %>
+    <% end %>
   </div>
 
   <div class="container" id="main">
@@ -37,11 +35,20 @@
       <% flash_name = name %>
       <% flash_name = "success" if name == :notice %>
       <% flash_name = "danger" if name == :alert %>
-      <div class="alert alert-<%= flash_name %>">
+      <div class="alert alert-<%= flash_name %> alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <%= msg %>
       </div>
     <% end %>
-
+    <div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="container">
+            <%= render 'feedbacks/form' %>
+          </div>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </div>
 
@@ -49,7 +56,7 @@
     <div class="container navbar-text">
       © <%= Time.now.strftime("%Y") %> Mark J. Lehman  |
       <%= link_to "Github", "https://github.com/supremebeing7/" %>  |
-      <%= link_to "Contact Us", new_feedback_path %>
+      <%= link_to "Contact Us", "#", :data => {:toggle => "modal", :target => ".bs-example-modal-md"} %>
     </div>
   </div>
 </body>

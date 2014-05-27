@@ -1,11 +1,16 @@
-<%= render 'layouts/errors', object: @report %>
+<div id="report_form">
+  <h1>Submit a report</h1>
 
-<%= form_for @report, :html => { :multipart => true } do |f| %>
-  <div class="form-group">
-    <%= f.text_area :description, :placeholder => 'Were there typos? or F-bombs? or racism/sexism/other-ism?', rows: 8, cols: 50 %>
-  </div>
-  <%= f.hidden_field :place_id, value: @place.id if @place %>
-  <%= f.hidden_field :crawl_id, value: @crawl.id if @crawl %>
-  <%= f.hidden_field :user_id, value: current_user.id if current_user %>
-  <%= f.submit(:class => "btn btn-custom") %>
-<% end %>
+  <%= form_for @report, :html => { :multipart => true } do |f| %>
+    <div class="form-group">
+      <%= f.text_area :description, :placeholder => 'Were there typos? or F-bombs? or racism/sexism/other-ism?', rows: 10, cols: 20 %>
+    </div>
+    <%= f.hidden_field :place_id, value: @place.id if @place %>
+    <%= f.hidden_field :crawl_id, value: @crawl.id if @crawl %>
+    <%= f.hidden_field :user_id, value: current_user.id if current_user %>
+    <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
+    <%= f.submit(:class => "btn btn-custom") %>
+  <% end %>
+  <br>
+  <br>
+</div>
