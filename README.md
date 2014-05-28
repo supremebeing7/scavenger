@@ -14,7 +14,7 @@ View the demo site here:
 
 * Run `git clone https://github.com/supremebeing7/airbnb_clone.git`
 * Run `bundle install`
-* Create database and migrations with `rake db:create` and `rake db:migrate db:test:prepare`
+* Create database and migrations with `rake db:create` and `rake db:schema:load db:test:prepare`
 
 ##Contributing
 
