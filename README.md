@@ -5,7 +5,7 @@ Scavenger Hunt / Pub Crawl app built with Ruby on Rails.
 
 Uses Google Oauth2 for login.
 
-Check out [USER_STORIES.md](https://github.com/supremebeing7/scavenger/blob/master/USER_STORIES.md) to see the completed and upcoming features.
+`User Stories` have been migrated to 'enhancements' in the Issues section. Check them out here [Issues#enhancements](https://github.com/supremebeing7/scavenger/issues?labels=enhancement&page=1&state=open) to see the completed and upcoming features.
 
 View the demo site here:
 [http://scavenger-hunter.herokuapp.com/](http://scavenger-hunter.herokuapp.com/)
