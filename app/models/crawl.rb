@@ -5,4 +5,8 @@ class Crawl < ActiveRecord::Base
   has_many :reports
   has_many :completed_crawls
   validates :name, :description, :user_id, presence: true
+
+  def short_description
+    self.description[0...100] + "..."
+  end
 end
