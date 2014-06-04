@@ -18,7 +18,6 @@ describe Crawl do
 
   context '#short_description' do
     it 'shows only first 100 characters of description, adds ... if characters removed' do
-      # @crawl.short_description.should eq "test"
       @crawl.short_description.length.should eq 103
     end
   end
