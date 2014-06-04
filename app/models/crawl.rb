@@ -7,9 +7,9 @@ class Crawl < ActiveRecord::Base
   validates :name, :description, :user_id, presence: true
 
   def short_description
-    matches = self.description[0...97].match(/(.+[.])/)
+    matches = self.description[0...97].match(/(.+[.!?])/)
     if matches
-      matches[1] + ".."
+      matches[1] + "..."
     else
       self.description[0...97] + "..."
     end
