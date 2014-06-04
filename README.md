@@ -23,6 +23,7 @@ View the demo site here:
 * Commit your changes `git commit -am 'Add some feature'`
 * Pull recent changes to master with `git pull`
 * Merge master with your branch
+* Write new test(s) for your addition so I don't accidentally break it
 * Ensure all tests pass with `rspec`
 * Push to the branch `git push origin my-new-feature`
 * Create new Pull Request`
