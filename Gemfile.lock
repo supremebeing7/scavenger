@@ -290,7 +290,6 @@ DEPENDENCIES
   jquery-rails
   launchy
   newrelic_rpm
-  omniauth
   omniauth-google-oauth2
   pg
   poltergeist
