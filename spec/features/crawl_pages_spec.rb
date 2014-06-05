@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Crawl do
+feature Crawl do
   before do
     @crawl = build :crawl
   end

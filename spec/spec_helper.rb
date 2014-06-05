@@ -5,7 +5,7 @@ SimpleCov.start
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
+# require 'rspec/autorun'
 
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
@@ -51,6 +51,9 @@ RSpec.configure do |config|
   #   request.env["devise.mapping"] = Devise.mappings[:user]
   #   request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
   # end
+  config.expect_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
 end
 
 Capybara.default_host = 'http://example.org'

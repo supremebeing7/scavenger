@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe User do
+feature User do
   before do
     @user = build :user
   end
@@ -12,7 +12,7 @@ describe User do
     end
 
     it 'gives an error if missing required fields' do
-      visit root_path
+      visit '/'
       click_link 'Sign up'
       click_button 'Sign up'
       page.should have_content "errors prohibited this user from being saved:"
