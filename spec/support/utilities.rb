@@ -15,6 +15,6 @@ def create_new_crawl
   visit new_crawl_path
   fill_in 'Name', with: @crawl.name
   fill_in 'Description', with: @crawl.description
-  find('#crawl_public').find(:xpath, 'option[1]').select_option
+  choose 'Public'
   click_button 'Create Crawl'
 end
