@@ -1,6 +1,6 @@
 <%= render 'layouts/errors', object: @crawl %>
 
-<%= form_for @crawl, :html => { :multipart => true } do |f| %>
+<%= form_for @crawl do |f| %>
   <div class='form-group'>
     <%= f.text_field :name, :placeholder => 'Name'  %>
     <%= radio_button_tag(:public, true, @crawl.public == true) %>
@@ -12,5 +12,5 @@
     <%= f.text_area :description, :placeholder => 'Description', rows: 8, cols: 50 %>
   </div>
   <%= f.hidden_field :user_id, value: current_user.id if current_user %>
-  <%= f.submit(:class => "btn btn-custom") %>
+  <%= f.submit "Hunt!", :class => "btn btn-custom" %>
 <% end %>
