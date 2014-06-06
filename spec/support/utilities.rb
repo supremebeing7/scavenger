@@ -16,5 +16,5 @@ def create_new_crawl
   fill_in 'Name', with: @crawl.name
   fill_in 'Description', with: @crawl.description
   choose 'Public'
-  click_button 'Create Crawl'
+  click_button 'Hunt!'
 end
