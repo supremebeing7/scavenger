@@ -46,4 +46,8 @@ class User < ActiveRecord::Base
   def full_size_pic
     self.photo_url.sub('?sz=50', '') if self.photo_url
   end
+
+  def photo_url
+    super || "missing.jpg"
+  end
 end
