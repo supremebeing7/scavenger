@@ -1,9 +1,11 @@
 SCAVENGER
 ===========
 
-[ ![Codeship Status for supremebeing7/scavenger](https://codeship.io/projects/ff132060-483c-0132-f391-3e765e74a88f/status)](https://codeship.io/projects/45838)
-
 Scavenger Hunt / Pub Crawl app built with Ruby on Rails.
+
+[ ![Codeship Status for supremebeing7/scavenger](https://codeship.io/projects/ff132060-483c-0132-f391-3e765e74a88f/status)](https://codeship.io/projects/45838)
+[![Code Climate](https://codeclimate.com/github/supremebeing7/scavenger/badges/gpa.svg)](https://codeclimate.com/github/supremebeing7/scavenger)
+[![Test Coverage](https://codeclimate.com/github/supremebeing7/scavenger/badges/coverage.svg)](https://codeclimate.com/github/supremebeing7/scavenger)
 
 Uses Google Oauth2 for login.
 
