@@ -48,6 +48,6 @@ class User < ActiveRecord::Base
   end
 
   def name
-    super.rstrip
+    id.nil? ? super : super.rstrip
   end
 end
