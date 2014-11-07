@@ -3,17 +3,17 @@
   <h1>It's Hunting Season</h1>
   <p>
     Make scavenger hunts around your town to share with friends. Lots more functionality coming, but if you have a suggestion,
-    <%= link_to "send us a message", "#", :data => {:toggle => "modal", :target => ".bs-example-modal-md"} %>
+    <%= link_to "send us a message", "feedback", :data => {:toggle => "modal", :target => ".bs-example-modal-md"} %>
     to let us know, or open an issue on
     <%= link_to "Github", "https://github.com/supremebeing7/scavenger/issues" %>
   </p>
   <%= link_to "Add a Scavenger Hunt!", new_crawl_path, class: "btn btn-custom btn-lg" %>
 </div>
-<div class="row">
+<div id="recently-added" class="row">
   <div id="new_feedback_form"></div>
   <h2>Recently Added!</h2>
   <% @crawls.each do |crawl| %>
-    <div id="recently-added" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
       <span class="glyphicon glyphicon-map-marker"></span>
       <%= link_to crawl.name, crawl %>
       <p><%= crawl.short_description %></p>
