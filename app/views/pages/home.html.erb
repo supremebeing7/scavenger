@@ -13,7 +13,7 @@
   <div id="new_feedback_form"></div>
   <h2>Recently Added!</h2>
   <% @crawls.each do |crawl| %>
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
       <span class="glyphicon glyphicon-map-marker"></span>
       <%= link_to crawl.name, crawl %>
       <p><%= crawl.short_description %></p>
