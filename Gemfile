@@ -19,14 +19,11 @@ gem 'thin'
 gem 'foreman'
 
 group :development do
-  gem 'sprockets_better_errors'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'pry'
   gem 'rerun'
 end
 
 group :test, :development do
+  gem 'pry-rails'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'faker'
@@ -35,13 +32,11 @@ group :test, :development do
 end
 
 group :test do
-  gem 'poltergeist'
-  gem 'shoulda'
+  gem 'shoulda-matchers'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
   gem 'rspec-rails'
-  gem 'simplecov'
   gem 'codeclimate-test-reporter', require: nil
 end
 
