@@ -19,7 +19,7 @@
         <% @crawl.places.each do |place| %>
           <li>
             <% if current_user && @crawl.user_id == current_user.id %>
-              <%= link_to "✗", place, method: "delete", id: "destroy" %>
+              <%= link_to "✗", place, method: "delete", id: "destroy", confirm: "Are you sure you want to delete #{place.name}?" %>
             <% end %>
             <%= link_to place.name, place %><br>
             <%= place.address %><br>

@@ -50,4 +50,8 @@ class User < ActiveRecord::Base
   def name
     id.nil? ? super : super.rstrip
   end
+
+  def photo_url
+    super || "missing.jpg"
+  end
 end

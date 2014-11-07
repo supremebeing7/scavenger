@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.4'
+gem 'rails', '4.0.5'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
@@ -13,7 +13,6 @@ gem 'devise'
 gem 'rest-client'
 gem 'geocoder'
 gem 'gmaps4rails'
-gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'thin'
 gem 'foreman'
@@ -42,4 +41,5 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'newrelic_rpm'
 end

@@ -1,16 +1,16 @@
 <%= render 'layouts/errors', object: @crawl %>
 
-<%= form_for @crawl, :html => { :multipart => true } do |f| %>
+<%= form_for @crawl do |f| %>
   <div class='form-group'>
     <%= f.text_field :name, :placeholder => 'Name'  %>
-    <select name="crawl[public]" id="crawl_public" data-role="slider">
-      <option value="true">Public</option>
-      <option value="false">Private</option>
-    </select>
+    <%= radio_button_tag(:public, true, @crawl.public == true) %>
+    <%= label_tag(:public_true, "Public") %>
+    <%= radio_button_tag(:public, false, @crawl.public == false) %>
+    <%= label_tag(:public_false, "Private") %>
   </div>
   <div class="form-group">
     <%= f.text_area :description, :placeholder => 'Description', rows: 8, cols: 50 %>
   </div>
   <%= f.hidden_field :user_id, value: current_user.id if current_user %>
-  <%= f.submit(:class => "btn btn-custom") %>
+  <%= f.submit "Hunt!", :class => "btn btn-custom" %>
 <% end %>

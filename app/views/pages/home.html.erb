@@ -14,10 +14,9 @@
   <h2>Recently Added!</h2>
   <% @crawls.each do |crawl| %>
     <div id="recently-added" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      <span class="glyphicon glyphicon-map-marker">
-        <%= link_to crawl.name, crawl %>
-      </span>
-      <p><%= crawl.description %></p>
+      <span class="glyphicon glyphicon-map-marker"></span>
+      <%= link_to crawl.name, crawl %>
+      <p><%= crawl.short_description %></p>
     </div>
   <% end %>
 </div>
