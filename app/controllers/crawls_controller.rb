@@ -1,4 +1,6 @@
 class CrawlsController < ApplicationController
+  include Maps
+
   before_filter :authenticate_user!, except: [:index, :show]
   def new
     @crawl = Crawl.new
@@ -25,12 +27,7 @@ class CrawlsController < ApplicationController
     else
       @completed_crawl = CompletedCrawl.new
     end
-    @hash = Gmaps4rails.build_markers(@crawl.places) do |place, marker|
-      marker.lat place.latitude
-      marker.lng place.longitude
-      marker.infowindow render_to_string(:partial => "/places/details", :locals => { :object => place})
-      marker.json({name: place.name})
-    end
+    build_map_markers(@crawl.places)
   end
 
   def edit
