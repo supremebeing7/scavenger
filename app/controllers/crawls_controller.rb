@@ -16,7 +16,8 @@ class CrawlsController < ApplicationController
   end
 
   def index
-    @crawls = Crawl.all
+    @report = Report.new
+    @crawls = Crawl.where(public: true)
   end
 
   def show

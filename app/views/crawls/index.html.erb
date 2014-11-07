@@ -1,0 +1,15 @@
+<%= content_for :title, "All hunts" %>
+
+<%= render 'reports/modal' %>
+
+<% @crawls.each do |crawl| %>
+  <div class="row">
+    <h1><%= crawl.name %></h1>
+    <h4><%= link_to "View Hunt Details", crawl %></h4>
+    <h5>
+      Created by <%= link_to crawl.user.name, crawl.user %>,
+      <%= time_ago_in_words(crawl.created_at) %> ago
+    </h5>
+    <p><%= crawl.description %></p>
+  </div>
+<% end %>
