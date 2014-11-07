@@ -2,6 +2,6 @@ class PagesController < ApplicationController
 
   def home
     @users = User.all
-    @crawls = Crawl.where(public: true)
+    @crawls = Crawl.recently_added(3)
   end
 end

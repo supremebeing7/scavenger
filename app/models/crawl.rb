@@ -7,11 +7,19 @@ class Crawl < ActiveRecord::Base
   validates :name, :description, :user_id, presence: true
 
   def short_description
-    matches = self.description[0...97].match(/(.+[.!?,;:])/)
+    matches = description[0...97].match(/(.+[.!?,;:])/)
     if matches
       matches[1] + "..."
     else
-      self.description[0...97] + "..."
+      description[0...97] + "..."
+    end
+  end
+
+  def self.recently_added(number)
+    if Crawl.where(public: true).count > number
+      Crawl.where(public: true).order(:created_at)[-number..-1]
+    else
+      Crawl.where(public: true)
     end
   end
 end
