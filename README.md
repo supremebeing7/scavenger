@@ -1,6 +1,10 @@
 SCAVENGER
 ===========
 
+### NOTE: This is no longer under active development, and therefore may not work properly. In particular, emails won't send anymore because Mandrill no longer offers free accounts and we have not switched to a new service. There are likely other pieces broken as well. Take it for what you will.
+
+# ¯\\\_(ツ)_/¯
+
 Scavenger Hunt / Pub Crawl app built with Ruby on Rails.
 
 [ ![Codeship Status for supremebeing7/scavenger](https://codeship.io/projects/ff132060-483c-0132-f391-3e765e74a88f/status)](https://codeship.io/projects/45838)
